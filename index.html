@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finding Saab Parts & Service</title>
+  <meta name="description" content="A practical guide to finding Saab parts: part numbers, where to buy new/used, hard-to-find strategies, and community resources." />
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --panel: #111826;
+      --card: #0f1623;
+      --text: #e8edf5;
+      --muted: #b7c2d3;
+      --faint: #7f8aa3;
+      --link: #8ab4ff;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius2: 22px;
+      --maxw: 1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f7f9fc;
+        --panel: #ffffff;
+        --card: #ffffff;
+        --text: #101828;
+        --muted: #344054;
+        --faint: #667085;
+        --link: #175cd3;
+        --border: rgba(16,24,40,.12);
+        --shadow: 0 12px 30px rgba(16,24,40,.08);
+      }
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font-family: var(--sans);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(138,180,255,.20), transparent 60%),
+                  radial-gradient(900px 550px at 90% 10%, rgba(120,255,215,.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 22px 16px 72px; }
+    header{
+      margin-top: 10px;
+      padding: 18px 18px 14px;
+      background: linear-gradient(135deg, rgba(138,180,255,.18), rgba(0,0,0,0));
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .kicker{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      font-size: 14px; color: var(--muted);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+    }
+    h1{
+      margin: 10px 0 6px;
+      font-size: clamp(28px, 3.2vw, 44px);
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+    .sub{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 70ch;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    nav{
+      position: sticky;
+      top: 14px;
+      align-self: start;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px;
+      box-shadow: var(--shadow);
+      z-index: 100;
+    }
+    .nav-toggle{
+      display: none;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 650;
+      font-size: 14px;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+      outline: none;
+    }
+    .nav-toggle:active,
+    .nav-toggle:focus{
+      background: rgba(255,255,255,.05);
+      outline: none;
+      border-color: var(--border);
+    }
+    .nav-toggle:hover{
+      background: rgba(138,180,255,.10);
+    }
+    .nav-toggle:before{
+      content: "☰ ";
+      margin-right: 6px;
+    }
+    nav.collapsed .nav-toggle:before{
+      content: "☰ ";
+    }
+    nav:not(.collapsed) .nav-toggle:before{
+      content: "✕ ";
+    }
+    @media (max-width: 900px){
+      html, body{
+        overflow-x: hidden;
+      }
+      .wrap{
+        position: relative;
+      }
+      .nav-toggle{
+        display: block;
+        pointer-events: auto !important;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        z-index: 1001;
+        width: 100%;
+      }
+      nav{
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw !important;
+        max-width: 100% !important;
+        z-index: 1000;
+        max-height: 60px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-radius: 0;
+        margin: 0 !important;
+        padding: 14px 16px;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        will-change: max-height;
+      }
+      nav:not(.collapsed){
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      nav.collapsed{
+        padding-bottom: 14px;
+      }
+      nav.collapsed .toc,
+      nav.collapsed .search,
+      nav.collapsed .meta{
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+      nav h2{
+        display: none !important;
+      }
+      .grid{
+        margin-top: 0;
+      }
+      main{
+        margin-top: 60px;
+      }
+      body{
+        padding-top: 0;
+      }
+    }
+    nav h2{
+      margin: 0 0 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--faint);
+    }
+    .toc a{
+      display:block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+    }
+    .toc a:hover{
+      background: rgba(138,180,255,.12);
+      text-decoration: none;
+    }
+    .toc small{ color: var(--faint); display:block; margin-top:2px; }
+    .search{
+      margin-top: 12px;
+      display:flex; gap:10px; align-items:center;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+    }
+    .search input{
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .search input::placeholder{ color: var(--faint); }
+    main{
+      min-width: 0;
+    }
+    section{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+    section h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -.01em;
+    }
+    section h3{
+      margin: 14px 0 8px;
+      font-size: 16px;
+      color: var(--text);
+    }
+    p{ margin: 8px 0; color: var(--muted); }
+    ul{ margin: 8px 0 8px 20px; color: var(--muted); }
+    li{ margin: 6px 0; }
+    .callout{
+      border: 1px solid var(--border);
+      background: rgba(138,180,255,.10);
+      padding: 12px 12px;
+      border-radius: 14px;
+      margin: 12px 0;
+      color: var(--text);
+    }
+    .callout b{ color: var(--text); }
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px){
+      .two{ grid-template-columns: 1fr; }
+    }
+    details{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+      padding: 10px 12px;
+      margin: 10px 0;
+    }
+    summary{
+      cursor: pointer;
+      color: var(--text);
+      font-weight: 650;
+      list-style: none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    summary:after{
+      content: "▾";
+      float:right;
+      color: var(--faint);
+    }
+    details[open] summary:after{ content: "▴"; }
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 2px; }
+    .chip{
+      font-size: 12px;
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    .meta{
+      font-size: 12px;
+      color: var(--faint);
+      margin-top: 10px;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    code, .mono{ font-family: var(--mono); }
+    .kbd{
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 2px 6px;
+      border: 1px solid var(--border);
+      border-bottom-width: 2px;
+      border-radius: 7px;
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+    }
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+    button{
+      appearance:none;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      font-weight: 650;
+    }
+    button:hover{ background: rgba(138,180,255,.10); }
+    footer{
+      margin-top: 16px;
+      color: var(--faint);
+      font-size: 12px;
+      text-align:center;
+    }
+    .hidden{ display:none !important; }
+
+    /* Print */
+    @media print{
+      body{ background: #fff; color:#000; }
+      nav{ display:none; }
+      section, header{ box-shadow:none; border-color:#ddd; }
+      a{ color:#000; text-decoration: underline; }
+      .wrap{ max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Finding Saab Parts & Service</h1>
+      <p class="sub">
+        "Saab? You can't get parts for those anymore." <b>You want to bet?</b><br/>
+        Saab parts are often easier to source than people assume—if you start with the right part number, know the best suppliers, and use the community strategically.<br/>
+        Plus, there are over a hundred Official Service Centers and many, many more independents out there willing and able to work on your Saab.<br/>
+        <b>Yes, it is possible to daily-drive your Saab over a decade after the last one was made.</b><br/>
+        Here are the steps to follow to get the part you need:
+      </p>
+      <div class="chips" aria-label="Quick steps">
+        <span class="chip">1) Get the part number</span>
+        <span class="chip">2) Check OEM / new sources</span>
+        <span class="chip">3) Check used sources</span>
+        <span class="chip">4) Check international & model-specific</span>
+        <span class="chip">5) Ask the community</span>
+      </div>
+      <div class="btnrow">
+        <button type="button" id="expandAll">Expand all</button>
+        <button type="button" id="collapseAll">Collapse all</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <nav aria-label="Table of contents" class="collapsed">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+        <h2>On this page</h2>
+        <div class="toc">
+          <a href="#why">Saab Parts & Service Still Exist <small>Hedin, OEM network, community</small></a>
+          <a href="#part-numbers">Step 1 — Part numbers <small>WIS/EPC, variants, supersessions</small></a>
+          <a href="#new">Step 2 — Buy new <small>OEM first, best retailers</small></a>
+          <a href="#used">Step 3 — Buy used <small>Specialty yards + aggregators</small></a>
+          <a href="#international">Step 4 — International & model-specific <small>Global suppliers + model-specific</small></a>
+          <a href="#community">Ask around <small>Facebook + non-Facebook forums</small></a>
+        </div>
+      </nav>
+
+      <main>
+        <section id="why" data-search="why hedin orio saabparts.com oem genuine parts warranty community">
+          <h2>Saab Parts & Service Still Exist</h2>
+          <p>
+            Saab Automobile AB isn't building cars right now, but the worldwide installed base is large (almost 1 million cars!) and the enthusiast community is extremely active.
+          </p>
+          <p>
+            More importantly, the former Saab Parts AB (formerly Orio AB), now
+            <a href="https://hedinmobilitygroup.com/business-areas/distribution/spare-parts/orio-ab" target="_blank" rel="noopener">Hedin Parts and Logistics AB</a>
+            (also at <a href="http://www.saabparts.com/us/" target="_blank" rel="noopener">saabparts.com</a>),
+            is alive and well—and working to ensure availability of genuine Saab spare parts for the long term.
+          </p>
+          <p>
+            This page is hosted by the <a href="http://www.saabclub.com" target="_blank" rel="noopener">Saab Club of North America</a>. Please consider becoming a member if this resource was helpful. Thanks to Jim Hickstein for starting this site.
+          </p>
+          <div class="callout">
+            <b>Mythbusting:</b> Saab parts are not unobtainable or unaffordable. Saabs cost less to run than most comparable European cars, often being simpler, with fewer cylinders, and with GM-shared parts which bring the price of ownership down. Plus, most Official Service Centers labor rates are well below new-car dealership rates.
+          </div>
+        </section>
+
+        <section id="part-numbers" data-search="part numbers p/n wis epc electronic parts catalog workshop information system manuals supersession b205r b235 dic idm brake measurement">
+          <h2>Step 1 — Identify the correct part number</h2>
+          <p>
+            Most suppliers can translate your description into a 7- or 8-digit Saab part number (p/n), but it pays to find it yourself—if only to compare. If you've ever wondered what the cryptic 7- or 8-digit codes on Saab parts are, now you know! Go down the rabbit hole too deep, and you'll find yourself memorizing them.
+          </p>
+
+          <div class="two">
+            <div>
+              <h3>Factory tools</h3>
+              <ul>
+                <li><a href="https://saabwisonline.com" target="_blank" rel="noopener">WIS (Workshop Information System)</a> — factory repair/service documentation.</li>
+                <li><a href="https://esaabparts.com" target="_blank" rel="noopener">Saab EPC (Electronic Parts Catalog)</a> — factory diagrams & part numbers (taxonomy can be an art).</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Older manuals (selected)</h3>
+              <ul>
+                <li><a href="/9000/">Saab 9000 manual project</a> (site-local link)</li>
+                <li><a href="http://www.saabnet.com/tsn/faq/manuals/" target="_blank" rel="noopener">Classic 900 & older manuals</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <details>
+            <summary>Ordering rules that prevent mistakes (read this)</summary>
+            <ul>
+              <li>When you can, don't only provide the part number—also provide full vehicle details (engine, transmission, trim, options).</li>
+              <li>Some parts vary by options you wouldn’t expect (heated/folding/auto-dimming mirrors, etc.).</li>
+              <li>Some parts have special codes (springs/shocks). Brake components often require physical measurement.</li>
+              <li>Part numbers can be superseded—search using both the old and new numbers.</li>
+              <li>Make the seller tell <i>you</i> the part number, and ask whether it differs from what you expected.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fast discovery trick: “Saab + part number” search</summary>
+            <p>Try searching Google for:</p>
+            <p class="mono"><code>saab 12786412</code> (example) — try with and without spaces/hyphens.</p>
+            <p>
+              This can uncover compatible cross-references (e.g., Bosch equivalents). Use judgment; sometimes “cheap” versions omit seals/rings or have quality issues.
+            </p>
+          </details>
+        </section>
+
+        <section id="new" data-search="new oem genuine saab hedin official service center osc esaabparts eeuroparts maptun rbm rmeuropean schwedenteile stateofnine genuinesaab fcpeuro nordicspeed skandix rockauto partsgeek">
+          <h2>Step 2 — Where to buy new and/or OEM parts (entire model range)</h2>
+          <p>
+            Consider buying new, genuine Saab parts when possible. They're guaranteed to work. The warranty is 3 months/36,000 miles for parts and labor if installed by an Official Service Center.
+          </p>
+          <p>
+            <a href="http://www.saabparts.com/" target="_blank" rel="noopener">Hedin</a> maintains a list of Official Service Centers (OSCs) and affiliated parts retailers.
+            <b>Shop around</b>: prices vary, and some dealers have local stock when upstream is dry.
+          </p>
+
+          <details>
+            <summary>Top OEM-friendly retailers</summary>
+            <ul>
+              <li><b>eSaabParts</b> — <a href="http://esaabparts.com" target="_blank" rel="noopener">eSaabParts.com</a> (often strong pricing; supports the <a href="https://www.saabmuseumusa.com/" target="_blank" rel="noopener">Saab Heritage Car Museum USA</a>).</li>
+              <li><b>eEuroParts</b> — <a href="http://eeuroparts.com" target="_blank" rel="noopener">eEuroParts.com</a> (OEM + aftermarket).</li>
+              <li><b>Saab Parts Counter</b> — <a href="http://www.saabpartscounter.com" target="_blank" rel="noopener">SaabPartsCounter.com</a> — Mitchell Saab, Simsbury, CT, USA. A long-standing, family-owned dealer committed to selling parts into the future.</li>
+              <li><b>Order Euro Parts</b> — <a href="http://www.ordereuroparts.com" target="_blank" rel="noopener">OrderEuroParts.com</a> — Schmelz Countryside, St Paul, MN, USA. Another long-standing dealer whose family is committed to Saab for the long haul.</li>
+              <li><b>Saab Parts Outlet</b> — <a href="https://outlet.saabparts.com" target="_blank" rel="noopener">outlet.saabparts.com</a> — Hedin Parts's own outlet store. There are great deals to be had here.</li>
+              <li><b>Vintage Parts</b> — <a href="https://www.vpartsinc.com/automobile/saab" target="_blank" rel="noopener">vpartsinc.com</a> — A few years back, Orio sold off a lot of inventory to Vintage Parts. You can often find parts out of stock on other sites here. This is not commonly known!</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Independents (Saab specialty)</summary>
+            <div class="callout">
+              <b>Maptun Dealers:</b>
+              <ul>
+                <li><a href="http://www.maptun.com" target="_blank" rel="noopener">MapTun</a> — performance parts.</li>
+                <li><a href="https://www.europeanmotorsvc.com/maptun-parts-kits" target="_blank" rel="noopener">European Motor Services</a> — PA. Authorized MAPTUN performance parts distributor.</li>
+                <li><a href="https://swedespeede.com/collections/saab-tuning" target="_blank" rel="noopener">SwedeSpeede</a> — MAPTUN tuning and performance parts.</li>
+              </ul>
+            </div>
+            <ul>
+              <li><a href="http://www.rbmperformance.com" target="_blank" rel="noopener">RBM Performance</a> — also <a href="https://www.rbmperformance.com/index.phtml?lng=EN" target="_blank" rel="noopener">(English)</a>.</li>
+              <li><a href="http://www.rmeuropean.com" target="_blank" rel="noopener">RM European</a> — OEM & aftermarket parts (multiple marques).</li>
+              <li><a href="http://www.schwedenteile.de" target="_blank" rel="noopener">Schwedenteile</a> — Germany (Saab & Volvo).</li>
+              <li><a href="http://stateofnine.com" target="_blank" rel="noopener">State Of Nine</a> — emblems, covers, accessories.</li>
+              <li><a href="http://www.genuinesaab.com" target="_blank" rel="noopener">Taliaferro Imports (GenuineSaab)</a> — bespoke suspension & performance upgrades (note: "genuine Saab parts" vs "GenuineSaab" brand).</li>
+              <li><a href="http://fcpeuro.com" target="_blank" rel="noopener">FCP Euro</a> — Saab plus many other marques.</li>
+              <li><a href="https://nordicspeed.com/" target="_blank" rel="noopener">NordicSpeed</a> — performance items & accessories. Canada-based.</li>
+              <li><a href="https://skandix.de/en/" target="_blank" rel="noopener">Skandix</a> — some hard-to-find Saab parts.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Not Saab-specialty (but commonly used)</summary>
+            <ul>
+              <li><a href="http://www.rockauto.com" target="_blank" rel="noopener">RockAuto</a> — good pricing; verify compatibility carefully.</li>
+              <li><a href="http://www.partsgeek.com" target="_blank" rel="noopener">PartsGeek</a></li>
+            </ul>
+          </details>
+        </section>
+
+        <section id="used" data-search="used yards dismantlers hans strandberg meyer goldwing eos saab parts connection epartsland redaero marks pick a part nordicspeed ireland saab partners bildelsbasen redox ebay car-part row52">
+          <h2>Step 3 — Where to buy used</h2>
+          <p>
+            Used parts are plentiful—especially through specialty Saab yards. Many offer warranties; ask before ordering.
+          </p>
+
+          <details>
+            <summary>United States (selected specialty yards)</summary>
+            <ul>
+              <li>MN (Elk River) — <a href="http://www.hansautopartsmn.com" target="_blank" rel="noopener">Hans</a></li>
+              <li>MN (Hanover) — <a href="https://www.ebay.com/str/mstraub592" target="_blank" rel="noopener">Hanover</a></li>
+              <li>WI (Centuria) — <a href="http://www.strandbergauto.com" target="_blank" rel="noopener">Strandberg</a></li>
+              <li>WI (Hustisford) — <a href="https://www.facebook.com/Country-Imports-161096427261660/" target="_blank" rel="noopener">Country Imports</a></li>
+              <li>IA (McIntire) — <a href="http://www.meyersaab.com" target="_blank" rel="noopener">Meyer Garage</a></li>
+              <li>MO (Kansas City) — <a href="https://www.avenueautoparts.com/" target="_blank" rel="noopener">Avenue Auto Wrecking</a></li>
+              <li>MI (New Haven) — <a href="https://www.9-3auto.com" target="_blank" rel="noopener">9-3 Auto</a></li>
+              <li>NY (Hastings) — <a href="http://www.goldwingsaabparts.com/" target="_blank" rel="noopener">Goldwing</a></li>
+              <li>CO (Boulder) — <a href="http://www.eosmotorsports.com" target="_blank" rel="noopener">EOS Motorsports</a></li>
+              <li>GA (Atlanta) — <a href="https://www.saabpartsconnection.com/" target="_blank" rel="noopener">Saab Parts Connection</a></li>
+              <li>PA — <a href="http://www.epartsland.com/collections/saab" target="_blank" rel="noopener">ePartsLand - European</a></li>
+              <li>MA (Athol) — <a href="http://www.redaero.net" target="_blank" rel="noopener">RedAero</a></li>
+              <li>MA (Sutton) — <a href="https://scautoshack.com" target="_blank" rel="noopener">Scott Carr's Auto Shack/The Saab Stripper</a></li>
+              <li>ME (Union) — <a href="mailto:msaabparts@outlook.com">Mark's Saab Pick-A-Part</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Aggregators (thousands of yards)</summary>
+            <ul>
+              <li><a href="http://car-part.com" target="_blank" rel="noopener">car-part.com</a></li>
+              <li><a href="http://row52.com" target="_blank" rel="noopener">row52.com</a></li>
+              <li><a href="http://www.ebay.com/motors/Parts-Accessories" target="_blank" rel="noopener">eBay Motors</a> (use normal buying precautions; watch for quality issues on notorious parts)</li>
+            </ul>
+          </details>
+        </section>
+
+        <section id="international" data-search="international canada germany netherlands sweden taiwan scanparts saabklubben kcperformance hard to find discontinued backordered nos persist gm era 2-stroke sonett viggen 9-5ng 9-4x hud windshield lightbar saabled">
+          <h2>Step 4 — International sources & model-specific parts</h2>
+          <p>
+            Many excellent international sources specialize in Saab parts, from reproduction parts to vintage-specific items.
+          </p>
+          <p>
+            Some parts are genuinely hard to find with the usual suspects, we'll admit that. That is not unique to the industry, though, and frankly, new cars have the same issues with today's supply chain.
+            That said, it helps to shop around or check with model-/powertrain-specific sites: there are plenty of small businesses modernizing, maintaining, and creating Saab parts for each individual model. We'll go through that below.
+          </p>
+
+          <details>
+            <summary>All models</summary>
+            <ul>
+              <li>Germany — <a href="https://scanparts.team/en/index" target="_blank" rel="noopener">ScanParts</a></li>
+              <li>Germany — <a href="http://skanmobileclassics.com" target="_blank" rel="noopener">Skan Mobile Classics</a></li>
+              <li>Germany — <a href="https://www.heuschmid.de/restaurierung/?lang=en" target="_blank" rel="noopener">Heuschmid</a> — Highly-respected, very large dealership known for full restorations and reproduction Hirsch parts(!).</li>
+              <li>Ireland — <a href="https://www.facebook.com/Saabsparesireland/" target="_blank" rel="noopener">Saab Spares Ireland</a></li>
+              <li>Netherlands — <a href="https://saabcarparts.nl/en/" target="_blank" rel="noopener">Saab Car Parts</a></li>
+              <li>Sweden — <a href="https://saabklubben-reservdelar.se" target="_blank" rel="noopener">Saabklubben Reservdelar</a> — Swedish Saab Club. Makes TONS of reproduction parts, and partners with Hedin for items like new seat covers.</li>
+              <li>Sweden — <a href="http://en.bildelsbasen.se" target="_blank" rel="noopener">Bildelsbasen.se</a></li>
+              <li>Sweden — <a href="http://redox.se" target="_blank" rel="noopener">Redox Bilfarm</a></li>
+              <li>United States — <a href="https://www.modernclassicsaab.com" target="_blank" rel="noopener">Modern Classic Saab</a> — Jordan Pagano is a mainstay of the community as a tuner and fabricator. Has plenty of off-catalog parts for many, many cars. Primarily specializing in C900s.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Vintage</summary>
+            <ul>
+              <li>Netherlands — <a href="https://www.saabworld.nl" target="_blank" rel="noopener">Saab World</a> — Also Classic 99 & 900.</li>
+              <li>Netherlands — <a href="https://onnokempink.nl" target="_blank" rel="noopener">Onno Kempink</a></li>
+              <li>Netherlands — <a href="http://www.saabparts.shop/index.php?route=common/home" target="_blank" rel="noopener">Saab Parts Shop</a></li>
+              <li>Netherlands — <a href="https://sweedspeed.com" target="_blank" rel="noopener">Sweedspeed</a> — Rally prepping for V4 cars and powertrain components for 99 & 900.</li>
+              <li>Sweden — <a href="https://www.classicofsweden.se" target="_blank" rel="noopener">Classic of Sweden</a> — New interior and exterior and external details.</li>
+              <li>United States — <a href="http://www.tomdonneymotors.com" target="_blank" rel="noopener">Tom Donney Motors</a> — Engine and transmission parts for two-stroke engined cars.</li>
+              <li>United States — <a href="http://www.subrew.com/jackashcraft/" target="_blank" rel="noopener">Jack Ashcraft</a> — V4 expert with beautifully-illustrated manuals and time-tested parts.</li>
+              <li><a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun, beautifully-reproduced stickers for your Saabs.</li>
+              <li>United States (Santa Fe, NM) — Jim Smart — Specialist/collector for two-stroke & Sonett.</li>
+              <li>United States (McIntire, IA) — <a href="https://www.meyersaab.com" target="_blank" rel="noopener">Meyer Garage (Marty Adams)</a> — Specialist/collector for two-stroke & Sonett.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Classic 99 & 900</summary>
+            <ul>
+              <li>Netherlands — <a href="https://www.saabworld.nl" target="_blank" rel="noopener">Saab World</a></li>
+              <li>Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a> — Also 9-5 NG & 9-4X. Performance parts.</li>
+              <li>Netherlands — <a href="https://sweedspeed.com" target="_blank" rel="noopener">Sweedspeed</a> — Rally prepping for V4 cars and powertrain components for 99 & 900.</li>
+              <li>Taiwan — <a href="https://www.saab900go.com" target="_blank" rel="noopener">Saab 900 Go</a> — Performance parts.</li>
+              <li>United Kingdom — <a href="https://www.abbottsaab.com" target="_blank" rel="noopener">Abbott Saab</a> — Tuners from the UK, respected, but niche.</li>
+              <li><a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> — Makes fuel system products for C900s.</li>
+              <li>United States — <a href="https://www.modernclassicsaab.com" target="_blank" rel="noopener">Modern Classic Saab</a> — Jordan Pagano is a mainstay of the community as a tuner and fabricator. Has plenty of off-catalog parts for many, many cars. Primarily specializing in C900s.</li>
+              <li><a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun, beautifully-reproduced stickers for your Saabs.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>9-5 NG & 9-4X</summary>
+            <ul>
+              <li>Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a> — Also Classic 99 & 900. Performance parts.</li>
+              <li>Sweden — <a href="https://hblom.se" target="_blank" rel="noopener">hblom.se</a> — Upgrades & future-proofing (including lightbar kits and blind spot monitoring retrofits).</li>
+              <li>Netherlands — <a href="https://www.kmtronics.nl/our-products" target="_blank" rel="noopener">KM-tronics</a> — Electronics repair and parts for NG9-3 & NG9-5 models.</li>
+              <li><a href="https://saabled.com/" target="_blank" rel="noopener">saabled.com</a> — lightbar repair</li>
+              <li><a href="https://www.esaabparts.com/95ng-led-fix/" target="_blank" rel="noopener">DIY repair kit</a></li>
+              <li><b>Note:</b> These cars are not impossible to supply—though some specific parts are harder. Specialty groups help a lot. HUD windshields becoming available again via Hedin channels.</li>
+              <li><b>Cross-reference:</b> Some 9-4X parts may cross to Cadillac SRX components, and some NG9-5 parts may cross over to Buick Regal/Opel Insignia parts.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>GM-era (roughly 1994-2009)</summary>
+            <ul>
+              <li><b>GM connection tip:</b> The GM connection can pay off. Some 8-digit Saab part numbers are really GM part numbers. Example: touch-up paint sourced via a GMC dealer using the same code. GM dealers often don't know the Saab relationship—asking about the part by number/code (without leading with "Saab") can help.</li>
+              <li>Germany — <a href="https://stephan-individual.de/en_GB" target="_blank" rel="noopener">Stephan Individual</a> — Lots of custom, rare late-model parts.</li>
+              <li>Switzerland — <a href="https://www.autocenter-salis.ch/hirsch-style.php" target="_blank" rel="noopener">Autocenter Salis</a> — Sells used & replica Hirsch Performance parts.</li>
+              <li>United Kingdom — <a href="https://www.abbottsaab.com" target="_blank" rel="noopener">Abbott Saab</a> — Tuners from the UK, respected, but niche.</li>
+              <li>Netherlands — <a href="https://www.jendvandenbosch.nl" target="_blank" rel="noopener">J&D van den Bosch</a></li>
+              <li>Netherlands — <a href="https://www.kmtronics.nl/our-products" target="_blank" rel="noopener">KM-tronics</a> — Electronics repair and parts for NG9-3 & NG9-5 models.</li>
+              <li>United States — <a href="https://deanhillsaabservice.com/Services/" target="_blank" rel="noopener">Dean Hill Saab Service</a> — Incredible resource for XWD driveshafts and NG9-3 subframes of all types (convertible, '04, XWD, etc.).</li>
+              <li>United States — <a href="https://www.jxbperformance.com" target="_blank" rel="noopener">JXB Performance</a> — Driveshaft carriers for NG9-3 XWD cars.</li>
+            </ul>
+          </details>
+
+        </section>
+
+        <section id="community" data-search="facebook groups saab parts finder north america owners usa viggen enthusiasts 9-5ng connection 9-4x club shaac forums saabcentral saabnet">
+          <h2>Ask around (community resources)</h2>
+          <p>
+            Community knowledge is often the fastest route to the correct part number, the right interchange, or the one obscure source that actually has stock.
+            Be mindful of selection bias: people post problems more than trouble-free ownership.
+          </p>
+
+          <details>
+            <summary>Facebook groups (links)</summary>
+            <ul>
+              <li><a href="https://www.facebook.com/groups/142640942566232/" target="_blank" rel="noopener">Saab Parts Finder North America</a></li>
+              <li><a href="https://www.facebook.com/groups/saabownersusa/" target="_blank" rel="noopener">Saab Owners USA</a></li>
+              <li><a href="https://www.facebook.com/groups/Saab95ngconnection/" target="_blank" rel="noopener">The Saab 9-5NG Connection</a></li>
+              <li><a href="https://www.facebook.com/groups/546599098711101/" target="_blank" rel="noopener">Saab 9-4X Club</a></li>
+              <li><a href="https://www.facebook.com/groups/41578262020/" target="_blank" rel="noopener">Saab Viggen Enthusiasts</a></li>
+              <li><a href="https://www.facebook.com/groups/MNSaabClub/" target="_blank" rel="noopener">Minnesota Saab Club</a></li>
+              <li><a href="https://www.facebook.com/groups/TwinCitiesSaab/" target="_blank" rel="noopener">Twin Cities Saab Club</a></li>
+              <li><a href="https://www.facebook.com/groups/milwaukeesaabclub/" target="_blank" rel="noopener">Milwaukee Saab Club</a></li>
+              <li><a href="https://www.facebook.com/share/g/1A2EM9sTXd/" target="_blank" rel="noopener">Saabs of New England</a></li>
+              <li><a href="https://www.facebook.com/groups/SAABsoftheMidatlantic/" target="_blank" rel="noopener">Saabs of the Mid-Atlantic</a></li>
+              <li><a href="https://www.facebook.com/groups/centralpennsaabclub/" target="_blank" rel="noopener">Central Penn Saab Club</a></li>
+              <li><a href="https://www.facebook.com/groups/520736137998806/" target="_blank" rel="noopener">SAABS FOR SALE ALL OVER THE INTERNET</a></li>
+              <li><a href="https://www.facebook.com/groups/steadysaabin/" target="_blank" rel="noopener">Saab Cars &amp; Parts: Buy, Sell, &amp; Trade Club</a></li>
+              <li><a href="https://www.facebook.com/groups/400985543342491/" target="_blank" rel="noopener">Saab Hoarders and Addicts Anonymous Club (SHAAC)</a></li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Not Facebook (forums)</summary>
+            <ul>
+              <li><a href="http://www.saabcentral.com" target="_blank" rel="noopener">Saab Central</a> — check the “workshop” forums.</li>
+              <li><a href="http://www.saabnet.com" target="_blank" rel="noopener">The Saab Network (SaabNet)</a> — check the bulletin board forums.</li>
+            </ul>
+          </details>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Expand/collapse all details
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    const allDetails = () => Array.from(document.querySelectorAll('details'));
+    expandAllBtn.addEventListener('click', () => allDetails().forEach(d => d.open = true));
+    collapseAllBtn.addEventListener('click', () => allDetails().forEach(d => d.open = false));
+
+    // Mobile nav toggle
+    (function(){
+      const nav = document.querySelector('nav');
+      let navToggle = document.querySelector('.nav-toggle');
+      if(!nav || !navToggle) return;
+      
+      function updateNavToggleText(){
+        const isMobile = window.matchMedia('(max-width: 900px)').matches;
+        if(!isMobile) return;
+        const button = document.querySelector('.nav-toggle');
+        if(!button) return;
+        if(nav.classList.contains('collapsed')){
+          button.textContent = 'Menu';
+        }else{
+          button.textContent = 'Finding Saab Parts';
+        }
+      }
+      
+      function checkMobileNav(){
+        const isMobile = window.matchMedia('(max-width: 900px)').matches;
+        if(isMobile){
+          // Force collapsed state on mobile
+          nav.classList.add('collapsed');
+        }else{
+          nav.classList.remove('collapsed');
+        }
+        updateNavToggleText();
+      }
+      
+      // Initialize immediately - ensure collapsed on mobile
+      if(window.matchMedia('(max-width: 900px)').matches){
+        nav.classList.add('collapsed');
+      }
+      checkMobileNav();
+      updateNavToggleText();
+      
+      // Handle resize
+      let resizeTimer;
+      window.addEventListener('resize', function(){
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function(){
+          checkMobileNav();
+          updateNavToggleText();
+        }, 100);
+      });
+      
+      // Handle toggle - ensure it works on mobile
+      let touchHandled = false;
+      
+      function handleToggle(e){
+        const isMobile = window.matchMedia('(max-width: 900px)').matches;
+        if(!isMobile) return;
+        
+        // Prevent double-firing
+        if(touchHandled && e && e.type === 'click') {
+          touchHandled = false;
+          return;
+        }
+        
+        if(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        }
+        
+        // Toggle the collapsed state
+        nav.classList.toggle('collapsed');
+        updateNavToggleText();
+        
+        return false;
+      }
+      
+      // Remove any existing listeners by cloning
+      const newButton = navToggle.cloneNode(true);
+      navToggle.parentNode.replaceChild(newButton, navToggle);
+      navToggle = document.querySelector('.nav-toggle');
+      
+      if(!navToggle) return;
+      
+      // Use touchstart for mobile, click as fallback
+      navToggle.addEventListener('touchstart', function(e){
+        touchHandled = true;
+        e.preventDefault();
+        e.stopPropagation();
+        handleToggle(e);
+        setTimeout(function(){ touchHandled = false; }, 300);
+      }, {passive: false});
+      
+      navToggle.addEventListener('click', function(e){
+        if(!touchHandled) {
+          handleToggle(e);
+        }
+      }, {passive: false});
+      
+      // Ensure button is interactive
+      navToggle.style.pointerEvents = 'auto';
+      navToggle.style.cursor = 'pointer';
+      navToggle.style.touchAction = 'manipulation';
+      navToggle.style.webkitTapHighlightColor = 'transparent';
+      navToggle.setAttribute('role', 'button');
+      navToggle.setAttribute('tabindex', '0');
+      
+      // Test if button is clickable
+      console.log('Nav toggle button setup complete', navToggle);
+    })();
+  </script>
+</body>
+</html>
