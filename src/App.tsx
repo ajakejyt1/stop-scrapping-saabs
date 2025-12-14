@@ -168,21 +168,21 @@ const sections: Section[] = [
               aftermarket.
             </li>
             <li>
-              <b>Saab Parts Counter</b> —
+              <b>Saab Parts Counter</b> —{" "}
               <a href="http://www.saabpartscounter.com" target="_blank" rel="noopener">SaabPartsCounter.com</a> — Mitchell
               Saab, Simsbury, CT, USA. A long-standing, family-owned dealer committed to selling parts into the future.
             </li>
             <li>
-              <b>Order Euro Parts</b> — <a href="http://www.ordereuroparts.com" target="_blank" rel="noopener">OrderEuroParts.com</a>
+              <b>Order Euro Parts</b> — <a href="http://www.ordereuroparts.com" target="_blank" rel="noopener">OrderEuroParts.com</a>{" "}
               — Schmelz Countryside, St Paul, MN, USA. Another long-standing dealer whose family is committed to Saab for the long
               haul.
             </li>
             <li>
-              <b>Saab Parts Outlet</b> — <a href="https://outlet.saabparts.com" target="_blank" rel="noopener">outlet.saabparts.com</a>
+              <b>Saab Parts Outlet</b> — <a href="https://outlet.saabparts.com" target="_blank" rel="noopener">outlet.saabparts.com</a>{" "}
               — Hedin Parts&apos;s own outlet store. There are great deals to be had here.
             </li>
             <li>
-              <b>Vintage Parts</b> — <a href="https://www.vpartsinc.com/automobile/saab" target="_blank" rel="noopener">vpartsinc.com</a>
+              <b>Vintage Parts</b> — <a href="https://www.vpartsinc.com/automobile/saab" target="_blank" rel="noopener">vpartsinc.com</a>{" "}
               — A few years back, Orio sold off a lot of inventory to Vintage Parts. You can often find parts out of stock on other
               sites here. This is not commonly known!
             </li>
@@ -320,7 +320,7 @@ const sections: Section[] = [
               WI (Centuria) — <a href="http://www.strandbergauto.com" target="_blank" rel="noopener">Strandberg</a>
             </li>
             <li>
-              WI (Hustisford) — 
+              WI (Hustisford) —{" "}
               <a href="https://www.facebook.com/Country-Imports-161096427261660/" target="_blank" rel="noopener">
                 Country Imports
               </a>
@@ -341,13 +341,13 @@ const sections: Section[] = [
               CO (Boulder) — <a href="http://www.eosmotorsports.com" target="_blank" rel="noopener">EOS Motorsports</a>
             </li>
             <li>
-              GA (Atlanta) — 
+              GA (Atlanta) —{" "}
               <a href="https://www.saabpartsconnection.com/" target="_blank" rel="noopener">
                 Saab Parts Connection
               </a>
             </li>
             <li>
-              PA — 
+              PA —{" "}
               <a href="http://www.epartsland.com/collections/saab" target="_blank" rel="noopener">
                 ePartsLand - European
               </a>
@@ -480,7 +480,7 @@ const sections: Section[] = [
               V4 expert with beautifully-illustrated manuals and time-tested parts.
             </li>
             <li>
-              <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
+              Sweden — <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
               beautifully-reproduced stickers for your Saabs.
             </li>
             <li>United States (Santa Fe, NM) — Jim Smart — Specialist/collector for two-stroke &amp; Sonett.</li>
@@ -522,11 +522,11 @@ const sections: Section[] = [
               the UK, respected, but niche.
             </li>
             <li>
-              <a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> —
+              United States — <a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> —
               Makes fuel system products for C900s.
             </li>
             <li>
-              <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
+              Sweden — <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
               beautifully-reproduced stickers for your Saabs.
             </li>
           </ul>
@@ -542,7 +542,7 @@ const sections: Section[] = [
               — Also Classic 99 &amp; 900. Performance parts.
             </li>
             <li>
-              <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
+              Belarus — <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
             </li>
             <li>
               Sweden — <a href="https://hblom.se" target="_blank" rel="noopener">hblom.se</a> — Upgrades &amp; future-proofing
@@ -553,10 +553,10 @@ const sections: Section[] = [
               Electronics repair and parts for NG9-3 &amp; NG9-5 models.
             </li>
             <li>
-              <a href="https://saabled.com/" target="_blank" rel="noopener">saabled.com</a> — lightbar repair
+              United States — <a href="https://saabled.com/" target="_blank" rel="noopener">saabled.com</a> — lightbar repair
             </li>
             <li>
-              <a href="https://www.esaabparts.com/95ng-led-fix/" target="_blank" rel="noopener">DIY repair kit</a>
+              United States — <a href="https://www.esaabparts.com/95ng-led-fix/" target="_blank" rel="noopener">DIY repair kit</a> — lightbar repair
             </li>
             <li>
               <b>Note:</b> These cars are not impossible to supply — though some specific parts are harder. Specialty groups help a
@@ -580,7 +580,7 @@ const sections: Section[] = [
               relationship — asking about the part by number/code (without leading with "Saab") can help.
             </li>
             <li>
-              <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
+              Belarus — <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
             </li>
             <li>
               Germany — <a href="https://stephan-individual.de/en_GB" target="_blank" rel="noopener">Stephan Individual</a> — Lots
