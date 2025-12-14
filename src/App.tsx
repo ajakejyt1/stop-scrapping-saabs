@@ -411,14 +411,19 @@ const sections: Section[] = [
         content: (
           <ul>
             <li>
-              Germany — <a href="https://scanparts.team/en/index" target="_blank" rel="noopener">ScanParts</a>
-            </li>
-            <li>
-              Germany — <a href="http://skanmobileclassics.com" target="_blank" rel="noopener">Skan Mobile Classics</a>
+              United States — <a href="https://www.modernclassicsaab.com" target="_blank" rel="noopener">Modern Classic Saab</a>{" "}
+              — Jordan Pagano is a mainstay of the community as a tuner and fabricator. Has plenty of reproduction parts that are off of his already-extensive catalog for many,
+              many cars. Primarily specializing in C900s.
             </li>
             <li>
               Germany — <a href="https://www.heuschmid.de/restaurierung/?lang=en" target="_blank" rel="noopener">Heuschmid</a>{" "}
               — Highly-respected, very large dealership known for full restorations and reproduction Hirsch parts(!).
+            </li>
+            <li>
+              Germany — <a href="https://scanparts.team/en/index" target="_blank" rel="noopener">ScanParts</a>
+            </li>
+            <li>
+              Germany — <a href="http://skanmobileclassics.com" target="_blank" rel="noopener">Skan Mobile Classics</a>
             </li>
             <li>
               Ireland — <a href="https://www.facebook.com/Saabsparesireland/" target="_blank" rel="noopener">Saab Spares Ireland</a>
@@ -427,23 +432,18 @@ const sections: Section[] = [
               Netherlands — <a href="https://saabcarparts.nl/en/" target="_blank" rel="noopener">Saab Car Parts</a>
             </li>
             <li>
-              Sweden — <a href="https://saabklubben-reservdelar.se" target="_blank" rel="noopener">Saabklubben Reservdelar</a>{" "}
-              — Swedish Saab Club. Makes TONS of reproduction parts, and partners with Hedin for items like new seat covers.
-            </li>
-            <li>
-              Sweden — <a href="https://shop.speedparts.se/en/" target="_blank" rel="noopener">Speedparts</a>{" "}
-              — Excellent source of parts not found among the usual sites.
-            </li>
-            <li>
               Sweden — <a href="http://en.bildelsbasen.se" target="_blank" rel="noopener">Bildelsbasen.se</a>
             </li>
             <li>
               Sweden — <a href="http://redox.se" target="_blank" rel="noopener">Redox Bilfarm</a>
             </li>
             <li>
-              United States — <a href="https://www.modernclassicsaab.com" target="_blank" rel="noopener">Modern Classic Saab</a>{" "}
-              — Jordan Pagano is a mainstay of the community as a tuner and fabricator. Has plenty of reproduction parts that are off of his already-extensive catalog for many,
-              many cars. Primarily specializing in C900s.
+              Sweden — <a href="https://saabklubben-reservdelar.se" target="_blank" rel="noopener">Saabklubben Reservdelar</a>{" "}
+              — Swedish Saab Club. Makes TONS of reproduction parts, and partners with Hedin for items like new seat covers.
+            </li>
+            <li>
+              Sweden — <a href="https://shop.speedparts.se/en/" target="_blank" rel="noopener">Speedparts</a>{" "}
+              — Excellent source of parts not found among the usual sites.
             </li>
           </ul>
         ),
@@ -454,14 +454,29 @@ const sections: Section[] = [
         content: (
           <ul>
             <li>
-              Netherlands — <a href="https://www.saabworld.nl" target="_blank" rel="noopener">Saab World</a> — Also Classic 99
-              &amp; 900.
+              United States — <a href="http://www.subrew.com/jackashcraft/" target="_blank" rel="noopener">Jack Ashcraft</a> —
+              V4 expert with beautifully-illustrated manuals and time-tested parts.
+            </li>
+            <li>United States (Santa Fe, NM) — Jim Smart — Specialist/collector for two-stroke &amp; Sonett.</li>
+            <li>
+              United States (McIntire, IA) — <a href="https://www.meyersaab.com" target="_blank" rel="noopener">
+                Meyer Garage (Marty Adams)
+              </a>{" "}
+              — Specialist/collector for two-stroke &amp; Sonett.
+            </li>
+            <li>
+              United States — <a href="http://www.tomdonneymotors.com" target="_blank" rel="noopener">Tom Donney Motors</a> —
+              Engine and transmission parts for two-stroke engined cars.
             </li>
             <li>
               Netherlands — <a href="https://onnokempink.nl" target="_blank" rel="noopener">Onno Kempink</a>
             </li>
             <li>
               Netherlands — <a href="http://www.saabparts.shop/index.php?route=common/home" target="_blank" rel="noopener">Saab Parts Shop</a>
+            </li>
+            <li>
+              Netherlands — <a href="https://www.saabworld.nl" target="_blank" rel="noopener">Saab World</a> — Also Classic 99
+              &amp; 900.
             </li>
             <li>
               Netherlands — <a href="https://sweedspeed.com" target="_blank" rel="noopener">Sweedspeed</a> — Rally prepping for V4
@@ -472,23 +487,8 @@ const sections: Section[] = [
               interior and exterior and external details.
             </li>
             <li>
-              United States — <a href="http://www.tomdonneymotors.com" target="_blank" rel="noopener">Tom Donney Motors</a> —
-              Engine and transmission parts for two-stroke engined cars.
-            </li>
-            <li>
-              United States — <a href="http://www.subrew.com/jackashcraft/" target="_blank" rel="noopener">Jack Ashcraft</a> —
-              V4 expert with beautifully-illustrated manuals and time-tested parts.
-            </li>
-            <li>
               Sweden — <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
               beautifully-reproduced stickers for your Saabs.
-            </li>
-            <li>United States (Santa Fe, NM) — Jim Smart — Specialist/collector for two-stroke &amp; Sonett.</li>
-            <li>
-              United States (McIntire, IA) — <a href="https://www.meyersaab.com" target="_blank" rel="noopener">
-                Meyer Garage (Marty Adams)
-              </a>{" "}
-              — Specialist/collector for two-stroke &amp; Sonett.
             </li>
           </ul>
         ),
@@ -504,15 +504,23 @@ const sections: Section[] = [
               many cars. Primarily specializing in C900s.
             </li>
             <li>
-              Netherlands — <a href="https://www.saabworld.nl" target="_blank" rel="noopener">Saab World</a>
+              United States — <a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> —
+              Makes fuel system products for C900s.
             </li>
             <li>
               Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a>{" "}
               — Also 9-5 NG &amp; 9-4X. Performance parts.
             </li>
             <li>
+              Netherlands — <a href="https://www.saabworld.nl" target="_blank" rel="noopener">Saab World</a>
+            </li>
+            <li>
               Netherlands — <a href="https://sweedspeed.com" target="_blank" rel="noopener">Sweedspeed</a> — Rally prepping for
               V4 cars and powertrain components for 99 &amp; 900.
+            </li>
+            <li>
+              Sweden — <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
+              beautifully-reproduced stickers for your Saabs.
             </li>
             <li>
               Taiwan — <a href="https://www.saab900go.com" target="_blank" rel="noopener">Saab 900 Go</a> — Reproductions of hard-to-find 900 parts.
@@ -520,14 +528,6 @@ const sections: Section[] = [
             <li>
               United Kingdom — <a href="https://www.abbottsaab.com" target="_blank" rel="noopener">Abbott Saab</a> — Tuners from
               the UK, respected, but niche.
-            </li>
-            <li>
-              United States — <a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> —
-              Makes fuel system products for C900s.
-            </li>
-            <li>
-              Sweden — <a href="https://www.saabstickers.com" target="_blank" rel="noopener">Saab Stickers</a> — Just for fun,
-              beautifully-reproduced stickers for your Saabs.
             </li>
           </ul>
         ),
@@ -538,25 +538,25 @@ const sections: Section[] = [
         content: (
           <ul>
             <li>
-              Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a>{" "}
-              — Also Classic 99 &amp; 900. Performance parts.
+              United States — <a href="https://www.esaabparts.com/95ng-led-fix/" target="_blank" rel="noopener">DIY repair kit</a> — lightbar repair
+            </li>
+            <li>
+              United States — <a href="https://saabled.com/" target="_blank" rel="noopener">saabled.com</a> — lightbar repair
             </li>
             <li>
               Belarus — <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
             </li>
             <li>
-              Sweden — <a href="https://hblom.se" target="_blank" rel="noopener">hblom.se</a> — Upgrades &amp; future-proofing
-              (including lightbar kits and blind spot monitoring retrofits).
+              Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a>{" "}
+              — Also Classic 99 &amp; 900. Performance parts.
             </li>
             <li>
               Netherlands — <a href="https://www.kmtronics.nl/our-products" target="_blank" rel="noopener">KM-tronics</a> —
               Electronics repair and parts for NG9-3 &amp; NG9-5 models.
             </li>
             <li>
-              United States — <a href="https://saabled.com/" target="_blank" rel="noopener">saabled.com</a> — lightbar repair
-            </li>
-            <li>
-              United States — <a href="https://www.esaabparts.com/95ng-led-fix/" target="_blank" rel="noopener">DIY repair kit</a> — lightbar repair
+              Sweden — <a href="https://hblom.se" target="_blank" rel="noopener">hblom.se</a> — Upgrades &amp; future-proofing
+              (including lightbar kits and blind spot monitoring retrofits).
             </li>
             <li>
               <b>Note:</b> These cars are not impossible to supply — though some specific parts are harder. Specialty groups help a
@@ -580,19 +580,19 @@ const sections: Section[] = [
               relationship — asking about the part by number/code (without leading with "Saab") can help.
             </li>
             <li>
+              United States — <a href="https://deanhillsaabservice.com/Services/" target="_blank" rel="noopener">Dean Hill Saab Service</a>{" "}
+              — Incredible resource for XWD driveshafts and NG9-3 subframes of all types (convertible, &apos;04, XWD, etc.).
+            </li>
+            <li>
+              United States — <a href="https://www.jxbperformance.com" target="_blank" rel="noopener">JXB Performance</a> —
+              Driveshaft carriers for NG9-3 XWD cars.
+            </li>
+            <li>
               Belarus — <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
             </li>
             <li>
               Germany — <a href="https://stephan-individual.de/en_GB" target="_blank" rel="noopener">Stephan Individual</a> — Lots
               of custom, rare late-model parts.
-            </li>
-            <li>
-              Switzerland — <a href="https://www.autocenter-salis.ch/hirsch-style.php" target="_blank" rel="noopener">Autocenter Salis</a>{" "}
-              — Sells used &amp; replica Hirsch Performance parts.
-            </li>
-            <li>
-              United Kingdom — <a href="https://www.abbottsaab.com" target="_blank" rel="noopener">Abbott Saab</a> — Tuners from
-              the UK, respected, but niche.
             </li>
             <li>
               Netherlands — <a href="https://www.jendvandenbosch.nl" target="_blank" rel="noopener">J&amp;D van den Bosch</a>
@@ -602,12 +602,12 @@ const sections: Section[] = [
               Electronics repair and parts for NG9-3 &amp; NG9-5 models.
             </li>
             <li>
-              United States — <a href="https://deanhillsaabservice.com/Services/" target="_blank" rel="noopener">Dean Hill Saab Service</a>{" "}
-              — Incredible resource for XWD driveshafts and NG9-3 subframes of all types (convertible, &apos;04, XWD, etc.).
+              Switzerland — <a href="https://www.autocenter-salis.ch/hirsch-style.php" target="_blank" rel="noopener">Autocenter Salis</a>{" "}
+              — Sells used &amp; replica Hirsch Performance parts.
             </li>
             <li>
-              United States — <a href="https://www.jxbperformance.com" target="_blank" rel="noopener">JXB Performance</a> —
-              Driveshaft carriers for NG9-3 XWD cars.
+              United Kingdom — <a href="https://www.abbottsaab.com" target="_blank" rel="noopener">Abbott Saab</a> — Tuners from
+              the UK, respected, but niche.
             </li>
           </ul>
         ),
@@ -729,7 +729,7 @@ const sections: Section[] = [
         title: "Save Your Saab!",
         description: (
           <p>
-            Saab isn&apos;t making cars anymore, and parts are around. Given that, if you want to pass your Saab on to a new home, please consider selling it whole to an enthusiast. People in the Facebook groups and forums above are often happy to take on projects of any depth, and would be more than happy to give friendly, reasonable advice. Have a heart — save a Saab.
+            Saab isn&apos;t making cars anymore, and parts are around. Given that, if you want to pass your Saab on to a new home, please consider selling it whole to an enthusiast. People in the Facebook groups and forums above are often happy to take on projects of any depth, and would be more than happy to give friendly, reasonable advice. <b>Have a heart — save a Saab.</b>
           </p>
         ),
       },
