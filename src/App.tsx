@@ -427,6 +427,10 @@ const sections: Section[] = [
               — Swedish Saab Club. Makes TONS of reproduction parts, and partners with Hedin for items like new seat covers.
             </li>
             <li>
+              Sweden — <a href="https://shop.speedparts.se/en/" target="_blank" rel="noopener">Speedparts</a>{" "}
+              — Excellent source of parts not found among the usual sites.
+            </li>
+            <li>
               Sweden — <a href="http://en.bildelsbasen.se" target="_blank" rel="noopener">Bildelsbasen.se</a>
             </li>
             <li>
