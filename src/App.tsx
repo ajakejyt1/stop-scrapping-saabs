@@ -55,8 +55,13 @@ const sections: Section[] = [
           yourself — if only to compare. If you&apos;ve ever wondered what the cryptic 7- or 8-digit codes on Saab parts are, now you
           know! Go down the rabbit hole too deep, and you&apos;ll find yourself memorizing them.
         </p>
-        <div>
-          <h3>Helpful resources for the advanced Saab owner</h3>
+      </>
+    ),
+    details: [
+      {
+        id: "helpful-resources",
+        summary: "Helpful resources for the advanced Saab owner",
+        content: (
           <div className="two">
             <div>
               <h4>Factory tools</h4>
@@ -89,10 +94,8 @@ const sections: Section[] = [
               </ul>
             </div>
           </div>
-        </div>
-      </>
-    ),
-    details: [
+        ),
+      },
       {
         id: "ordering-rules",
         summary: "Ordering rules that prevent mistakes (read this)",
@@ -100,10 +103,11 @@ const sections: Section[] = [
           <ul>
             <li>
               When you can, don&apos;t only provide the part number — also provide full vehicle details (engine, transmission, trim,
-              options). Saab Parts and eSaabParts also have VIN decoders, where you can find out all of the relevant details of vehicle, such as suspension type, brake disc size, options, colors, and more.{" "}
+              options).{" "}
               <a href="https://saabparts.com/us/mysaabcar-online/saab-original-vin-decoder/" target="_blank" rel="noopener">Saab Parts</a>{" "}
               and{" "}
-              <a href="https://esaabparts.com" target="_blank" rel="noopener">eSaabParts</a>.
+              <a href="https://esaabparts.com" target="_blank" rel="noopener">eSaabParts</a>{" "}
+              also have VIN decoders, where you can find out all of the relevant details of vehicle, such as suspension type, brake disc size, options, colors, and more.
             </li>
             <li>Some parts vary by options you wouldn’t expect (heated/folding/auto-dimming mirrors, etc.). You can often find these codes listed on the sticker in the driver's front door jamb.</li>
             <li>Some parts have special codes (springs/shocks). Brake components often require physical measurement.</li>
@@ -141,9 +145,9 @@ const sections: Section[] = [
         </p>
         <p>
           <a href="https://saabparts.com/us/book-a-service/" target="_blank" rel="noopener">
-            Official Service Centers
+            Hedin
           </a>{" "}
-          maintain a list of Official Service Centers (OSCs) and affiliated parts retailers. <b>Shop around</b>: prices vary,
+          maintains a list of Official Service Centers (OSCs) and affiliated parts retailers. <b>Shop around</b>: prices vary,
           and some dealers have local stock when upstream is dry.
         </p>
       </>
@@ -190,29 +194,6 @@ const sections: Section[] = [
         summary: "Independents (Saab specialty)",
         content: (
           <>
-            <div className="callout">
-              <b>Maptun Dealers:</b>
-              <ul>
-                <li>
-                  <a href="http://www.maptun.com" target="_blank" rel="noopener">
-                    Maptun
-                  </a>{" "}
-                  — performance parts.
-                </li>
-                <li>
-                  <a href="https://www.europeanmotorsvc.com/maptun-parts-kits" target="_blank" rel="noopener">
-                    European Motor Services
-                  </a>{" "}
-                  — PA. Authorized Maptun performance parts distributor.
-                </li>
-                <li>
-                  <a href="https://swedespeede.com/collections/saab-tuning" target="_blank" rel="noopener">
-                    SwedeSpeede
-                  </a>{" "}
-                  — Maptun tuning and performance parts.
-                </li>
-              </ul>
-            </div>
             <ul>
               <li>
                 <a href="http://www.rbmperformance.com" target="_blank" rel="noopener">
@@ -263,6 +244,29 @@ const sections: Section[] = [
                 — some hard-to-find Saab parts.
               </li>
             </ul>
+            <div className="callout">
+              <b>Maptun Dealers:</b>
+              <ul>
+                <li>
+                  <a href="http://www.maptun.com" target="_blank" rel="noopener">
+                    Maptun
+                  </a>{" "}
+                  — performance parts.
+                </li>
+                <li>
+                  <a href="https://www.europeanmotorsvc.com/maptun-parts-kits" target="_blank" rel="noopener">
+                    European Motor Services
+                  </a>{" "}
+                  — PA. Authorized Maptun performance parts distributor.
+                </li>
+                <li>
+                  <a href="https://swedespeede.com/collections/saab-tuning" target="_blank" rel="noopener">
+                    SwedeSpeede
+                  </a>{" "}
+                  — Maptun tuning and performance parts.
+                </li>
+              </ul>
+            </div>
           </>
         ),
       },
@@ -316,7 +320,7 @@ const sections: Section[] = [
               WI (Centuria) — <a href="http://www.strandbergauto.com" target="_blank" rel="noopener">Strandberg</a>
             </li>
             <li>
-              WI (Hustisford) —
+              WI (Hustisford) — 
               <a href="https://www.facebook.com/Country-Imports-161096427261660/" target="_blank" rel="noopener">
                 Country Imports
               </a>
@@ -337,13 +341,13 @@ const sections: Section[] = [
               CO (Boulder) — <a href="http://www.eosmotorsports.com" target="_blank" rel="noopener">EOS Motorsports</a>
             </li>
             <li>
-              GA (Atlanta) —
+              GA (Atlanta) — 
               <a href="https://www.saabpartsconnection.com/" target="_blank" rel="noopener">
                 Saab Parts Connection
               </a>
             </li>
             <li>
-              PA —
+              PA — 
               <a href="http://www.epartsland.com/collections/saab" target="_blank" rel="noopener">
                 ePartsLand - European
               </a>
@@ -619,6 +623,106 @@ const sections: Section[] = [
             source that actually has stock. Be mindful of selection bias: people post problems more than trouble-free ownership.
           </p>
         ),
+        details: [
+          {
+            id: "facebook",
+            summary: "Facebook groups (links)",
+            content: (
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/groups/142640942566232/" target="_blank" rel="noopener">
+                    Saab Parts Finder North America
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/saabownersusa/" target="_blank" rel="noopener">
+                    Saab Owners USA
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/Saab95ngconnection/" target="_blank" rel="noopener">
+                    The Saab 9-5NG Connection
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/546599098711101/" target="_blank" rel="noopener">
+                    Saab 9-4X Club
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/41578262020/" target="_blank" rel="noopener">
+                    Saab Viggen Enthusiasts
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/MNSaabClub/" target="_blank" rel="noopener">
+                    Minnesota Saab Club
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/TwinCitiesSaab/" target="_blank" rel="noopener">
+                    Twin Cities Saab Club
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/milwaukeesaabclub/" target="_blank" rel="noopener">
+                    Milwaukee Saab Club
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/share/g/1A2EM9sTXd/" target="_blank" rel="noopener">
+                    Saabs of New England
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/SAABsoftheMidatlantic/" target="_blank" rel="noopener">
+                    Saabs of the Mid-Atlantic
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/centralpennsaabclub/" target="_blank" rel="noopener">
+                    Central Penn Saab Club
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/520736137998806/" target="_blank" rel="noopener">
+                    SAABS FOR SALE ALL OVER THE INTERNET
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/steadysaabin/" target="_blank" rel="noopener">
+                    Saab Cars &amp; Parts: Buy, Sell, &amp; Trade Club
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/groups/400985543342491/" target="_blank" rel="noopener">
+                    Saab Hoarders and Addicts Anonymous Club (SHAAC)
+                  </a>
+                </li>
+              </ul>
+            ),
+          },
+          {
+            id: "forums",
+            summary: "Not Facebook (forums)",
+            content: (
+              <ul>
+                <li>
+                  <a href="http://www.saabcentral.com" target="_blank" rel="noopener">
+                    Saab Central
+                  </a>{" "}
+                  — check the "workshop" forums.
+                </li>
+                <li>
+                  <a href="http://www.saabnet.com" target="_blank" rel="noopener">
+                    The Saab Network (SaabNet)
+                  </a>{" "}
+                  — check the bulletin board forums.
+                </li>
+              </ul>
+            ),
+          },
+        ],
       },
       {
         id: "save-saab",
@@ -628,107 +732,7 @@ const sections: Section[] = [
             Saab isn&apos;t making cars anymore, and parts are around. Given that, if you want to pass your Saab on to a new home, please consider selling it whole to an enthusiast. People in the Facebook groups and forums above are often happy to take on projects of any depth, and would be more than happy to give friendly, reasonable advice. Have a heart — save a Saab.
           </p>
         ),
-    details: [
-      {
-        id: "facebook",
-        summary: "Facebook groups (links)",
-        content: (
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/groups/142640942566232/" target="_blank" rel="noopener">
-                Saab Parts Finder North America
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/saabownersusa/" target="_blank" rel="noopener">
-                Saab Owners USA
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/Saab95ngconnection/" target="_blank" rel="noopener">
-                The Saab 9-5NG Connection
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/546599098711101/" target="_blank" rel="noopener">
-                Saab 9-4X Club
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/41578262020/" target="_blank" rel="noopener">
-                Saab Viggen Enthusiasts
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/MNSaabClub/" target="_blank" rel="noopener">
-                Minnesota Saab Club
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/TwinCitiesSaab/" target="_blank" rel="noopener">
-                Twin Cities Saab Club
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/milwaukeesaabclub/" target="_blank" rel="noopener">
-                Milwaukee Saab Club
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/share/g/1A2EM9sTXd/" target="_blank" rel="noopener">
-                Saabs of New England
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/SAABsoftheMidatlantic/" target="_blank" rel="noopener">
-                Saabs of the Mid-Atlantic
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/centralpennsaabclub/" target="_blank" rel="noopener">
-                Central Penn Saab Club
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/520736137998806/" target="_blank" rel="noopener">
-                SAABS FOR SALE ALL OVER THE INTERNET
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/steadysaabin/" target="_blank" rel="noopener">
-                Saab Cars &amp; Parts: Buy, Sell, &amp; Trade Club
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/groups/400985543342491/" target="_blank" rel="noopener">
-                Saab Hoarders and Addicts Anonymous Club (SHAAC)
-              </a>
-            </li>
-          </ul>
-        ),
       },
-      {
-        id: "forums",
-        summary: "Not Facebook (forums)",
-        content: (
-          <ul>
-            <li>
-              <a href="http://www.saabcentral.com" target="_blank" rel="noopener">
-                Saab Central
-              </a>{" "}
-              — check the “workshop” forums.
-            </li>
-            <li>
-              <a href="http://www.saabnet.com" target="_blank" rel="noopener">
-                The Saab Network (SaabNet)
-              </a>{" "}
-              — check the bulletin board forums.
-            </li>
-          </ul>
-        ),
-      },
-    ],
-  },
 ];
 
 const tocLinks = [
