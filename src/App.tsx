@@ -399,7 +399,7 @@ const sections: Section[] = [
         <p>
           Some parts are genuinely hard to find with the usual suspects, we&apos;ll admit that. That is not unique to the industry,
           though, and frankly, new cars have the same issues with today&apos;s supply chain. That said, it helps to shop around or
-          check with model-/powertrain-specific sites: there are plenty of small businesses modernizing, maintaining, and creating
+          check with model-specific sites: there are plenty of small businesses modernizing, maintaining, and creating
           Saab parts for each individual model. We&apos;ll go through that below.
         </p>
       </>
@@ -618,10 +618,15 @@ const sections: Section[] = [
         id: "community",
         title: "Ask around (community resources)",
         description: (
-          <p>
-            Community knowledge is often the fastest route to the correct part number, the right interchange, or the one obscure
-            source that actually has stock. Be mindful of selection bias: people post problems more than trouble-free ownership.
-          </p>
+          <>
+            <p>
+              Community knowledge is often the fastest route to the correct part number, the right interchange, or the one obscure
+              source that actually has stock.
+            </p>
+            <p>
+              Remember to include year, model, engine, drive axles, and body style when inquiring online to be sure you get the right part!
+            </p>
+          </>
         ),
         details: [
           {
