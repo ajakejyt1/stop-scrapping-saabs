@@ -590,6 +590,10 @@ const sections: Section[] = [
               relationship — asking about the part by number/code (without leading with "Saab") can help.
             </li>
             <li>
+              United States — <a href="https://aero-lights.com" target="_blank" rel="noopener">Aerolight</a> —
+              Custom lighting and seating upgrades for GM-era cars.
+            </li>
+            <li>
               United States — <a href="https://deanhillsaabservice.com/Services/" target="_blank" rel="noopener">Dean Hill Saab Service</a>{" "}
               — Incredible resource for XWD driveshafts and NG9-3 subframes of all types (convertible, &apos;04, XWD, etc.).
             </li>
@@ -605,11 +609,19 @@ const sections: Section[] = [
               of custom, rare late-model parts.
             </li>
             <li>
+              Latvia — <a href="https://www.ebay.com/usr/saableather" target="_blank" rel="noopener">SaabLeather</a> —
+              Wide selection of custom leather-wrapped interior trim.
+            </li>
+            <li>
               Netherlands — <a href="https://www.jendvandenbosch.nl" target="_blank" rel="noopener">J&amp;D van den Bosch</a>
             </li>
             <li>
               Netherlands — <a href="https://www.kmtronics.nl/our-products" target="_blank" rel="noopener">KM-tronics</a> —
               Electronics repair and parts for NG9-3 &amp; NG9-5 models.
+            </li>
+            <li>
+              Sweden — <a href="https://esqs.se/produkt-kategori/vehicle-components/" target="_blank" rel="noopener">ESQS</a> —
+              Custom wheels, NOS Hirsch &amp; NEVS components, and reproduction 9-3 Griffin front ends.
             </li>
             <li>
               Switzerland — <a href="https://www.autocenter-salis.ch/hirsch-style.php" target="_blank" rel="noopener">Autocenter Salis</a>{" "}
@@ -796,29 +808,95 @@ export default function App() {
     setOpenDetails(prev => ({ ...prev, [id]: open }));
   };
 
+  // Count unique links in Step 2, Step 3, Step 4, and Ask Around sections
+  const [uniqueLinkCount, setUniqueLinkCount] = useState(0);
+
+  useEffect(() => {
+    const targetSectionIds = ["new", "used", "international", "community"];
+    const linkSet = new Set<string>();
+
+    targetSectionIds.forEach(sectionId => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const links = section.querySelectorAll<HTMLAnchorElement>("a[href]");
+        links.forEach(link => {
+          const href = link.href;
+          // Only count external links (not mailto, not relative paths starting with /, not #)
+          if (href && !href.startsWith("mailto:") && !href.startsWith(window.location.origin + "/") && !href.startsWith("#")) {
+            try {
+              const url = new URL(href);
+              // Normalize: origin + pathname (lowercase, no trailing slash) + search
+              const normalized = url.origin + url.pathname.toLowerCase().replace(/\/$/, "") + url.search.toLowerCase();
+              linkSet.add(normalized);
+            } catch {
+              // If URL parsing fails, skip it
+            }
+          }
+        });
+      }
+    });
+
+    setUniqueLinkCount(linkSet.size);
+  }, [openDetails]); // Re-run when details open/close state changes
+
   return (
     <div className="wrap">
-      <header>
-        <h1>Finding Saab Parts &amp; Service</h1>
+      <div className="header-wrapper">
+        <header style={{ flex: "1 1 400px", order: 1, display: "flex", flexDirection: "column" }}>
+          <h1>Finding Saab Parts &amp; Service</h1>
           <p className="sub">
-          "Saab? You can&apos;t get parts for those anymore." <b>You want to bet?</b>
-          <br />
-          Saab parts are often easier to source than people assume.
-          <br />
-          Plus, there are over a hundred Official Service Centers and many, many more independents out there willing and able to
-          work on your Saab.
-          <br />
-          <b>Yes, it is possible to daily-drive your Saab over a decade after the last one was made.</b>
-        </p>
-        <div className="btnrow">
-          <button type="button" onClick={() => setAllDetails(true)}>
-            Expand all
-          </button>
-          <button type="button" onClick={() => setAllDetails(false)}>
-            Collapse all
-          </button>
+            "Saab? You can&apos;t get parts for those anymore." <b>Wanna bet?</b>
+            <br />
+            Saab parts are often easier to source than people assume.
+            <br />
+            Plus, there are over a hundred Official Service Centers and many, many more independents out there willing and able to
+            work on your Saab.
+            <br />
+            <b>Yes, it is possible to daily-drive your Saab over a decade after the last one was made.</b>
+          </p>
+          <div className="btnrow">
+            <button type="button" onClick={() => setAllDetails(true)}>
+              Expand all
+            </button>
+            <button type="button" onClick={() => setAllDetails(false)}>
+              Collapse all
+            </button>
+          </div>
+        </header>
+        <div className="link-counter-widget" style={{ 
+          flex: "0 0 auto", 
+          textAlign: "center",
+          padding: "14px 18px",
+          background: "var(--card)",
+          border: "1px solid var(--border)",
+          borderRadius: "var(--radius)",
+          minWidth: "180px",
+          maxWidth: "220px",
+          boxShadow: "var(--shadow)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          order: 2,
+          alignSelf: "stretch"
+        }}>
+          <div style={{ 
+            fontSize: "clamp(32px, 4vw, 48px)", 
+            fontWeight: "bold", 
+            lineHeight: 1, 
+            marginBottom: "6px",
+            color: "var(--text)"
+          }}>
+            {uniqueLinkCount}
+          </div>
+          <div style={{ 
+            fontSize: "16px", 
+            color: "var(--muted)",
+            lineHeight: 1.4
+          }}>
+            unique parts sources listed here for the Saab community
+          </div>
         </div>
-      </header>
+      </div>
 
       <div className="grid">
         <nav aria-label="Table of contents" className={navCollapsed ? "collapsed" : ""}>

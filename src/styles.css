@@ -61,6 +61,23 @@ a:hover {
   padding: 22px 16px 72px;
 }
 
+.header-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.header-wrapper > header {
+  margin-top: 10px;
+}
+
+.link-counter-widget {
+  align-self: stretch;
+  margin-top: 10px;
+}
+
 header {
   margin-top: 10px;
   padding: 18px 18px 14px;
@@ -176,6 +193,22 @@ nav:not(.collapsed) .nav-toggle:before {
     position: relative;
   }
 
+  .link-counter-widget {
+    order: 3 !important;
+    width: 100%;
+    max-width: 100% !important;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  header .btnrow {
+    margin-top: 12px !important;
+  }
+
   .nav-toggle {
     display: block;
     pointer-events: auto !important;
@@ -228,11 +261,37 @@ nav:not(.collapsed) .nav-toggle:before {
   }
 
   .grid {
-    margin-top: 0;
+    margin-top: 0 !important;
+  }
+
+  .header-wrapper {
+    margin-bottom: 0 !important;
+    gap: 0 !important;
+    margin-top: 38px !important;
+    padding-top: 6px !important;
+  }
+
+  header {
+    margin-bottom: 16px !important;
   }
 
   main {
-    margin-top: 60px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  main > section:first-child {
+    margin-top: 16px !important;
+    padding-top: 14px !important;
+  }
+
+  .wrap > .header-wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  .wrap > .header-wrapper + .grid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
   body {
