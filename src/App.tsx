@@ -88,6 +88,12 @@ const sections: Section[] = [
                   </a>{" "}
                   — link redirects to eSaabParts, which roughly uses the EPC for navigation.
                 </li>
+                <li>
+                  <a href="https://www.obdii.shop/goods-21-GM-Tech2-Tech-2-Scanner-GM-Diagnostic-tool-CANdi-TIS2000.html" target="_blank" rel="noopener">
+                    Tech 2 Device Clone
+                  </a>{" "}
+                  — Please consider supporting your local shop with an official Tech 2 device, but if you want the peace of mind of being able to perform cost-effective, dealer-level diagnostics anywhere, purchase a Tech 2 device clone.
+                </li>
               </ul>
             </div>
             <div>
@@ -136,7 +142,7 @@ const sections: Section[] = [
               <code>saab 12786412</code> (example) — try with and without spaces/hyphens.
             </p>
             <p>
-              This can uncover compatible cross-references (e.g., Bosch equivalents). Use judgment; sometimes “cheap” versions
+              This can uncover compatible cross-references (e.g., Bosch or GM equivalents). Use judgment; sometimes “cheap” versions
               omit seals/rings or have quality issues.
             </p>
           </>
@@ -514,6 +520,9 @@ const sections: Section[] = [
               many cars. Primarily specializing in C900s.
             </li>
             <li>
+              United States — <a href="https://www.gpopshop.com" target="_blank" rel="noopener">GPop Shop</a> — Turbo rebuild kits.
+            </li>
+            <li>
               United States — <a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> —
               Makes fuel system products for C900s.
             </li>
@@ -549,6 +558,9 @@ const sections: Section[] = [
           <ul>
             <li>
               United States — <a href="https://www.esaabparts.com/95ng-led-fix/" target="_blank" rel="noopener">DIY repair kit</a> — lightbar repair
+            </li>
+            <li>
+              United States — <a href="https://www.gmpartsdirect.com" target="_blank" rel="noopener">GM Parts Direct</a> — For these vehicles, you might want to check if compatible parts from other vehicles are available straight from GM.
             </li>
             <li>
               United States — <a href="https://saabled.com/" target="_blank" rel="noopener">saabled.com</a> — lightbar repair
@@ -598,11 +610,17 @@ const sections: Section[] = [
               — Incredible resource for XWD driveshafts and NG9-3 subframes of all types (convertible, &apos;04, XWD, etc.).
             </li>
             <li>
+              United States — <a href="https://ghwerks.com" target="_blank" rel="noopener">GHWerks</a> — American-made mechanical upgrades (brakes, motor internals, mounts, clutches) for 9000s, 9-5s, 9-3s, and even a few C900 parts.
+            </li>
+            <li>
               United States — <a href="https://www.jxbperformance.com" target="_blank" rel="noopener">JXB Performance</a> —
               Driveshaft carriers for NG9-3 XWD cars.
             </li>
             <li>
               Belarus — <a href="https://tunstyle.eu" target="_blank" rel="noopener">tunstyle.eu</a> — Custom bodykits and interior details, including Hirsch replica parts.
+            </li>
+            <li>
+              Canada — <a href="https://rhbturbochargers.ca" target="_blank" rel="noopener">RHB Turbochargers</a> — Canadian-made performance head gaskets for B207, B2x4, and B2x5 engines along with a few NG900/NG9-3 and 9000 parts.
             </li>
             <li>
               Germany — <a href="https://stephan-individual.de/en_GB" target="_blank" rel="noopener">Stephan Individual</a> — Lots
@@ -812,7 +830,7 @@ export default function App() {
   const [uniqueLinkCount, setUniqueLinkCount] = useState(0);
 
   useEffect(() => {
-    const targetSectionIds = ["new", "used", "international", "community"];
+    const targetSectionIds = ["part-numbers", "new", "used", "international", "community"];
     const linkSet = new Set<string>();
 
     targetSectionIds.forEach(sectionId => {
@@ -893,7 +911,7 @@ export default function App() {
             color: "var(--muted)",
             lineHeight: 1.4
           }}>
-            unique parts sources listed here for the Saab community
+            unique resources listed here for the Saab community
           </div>
         </div>
       </div>
