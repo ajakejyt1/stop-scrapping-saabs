@@ -327,10 +327,47 @@ const sections: Section[] = [
         content: (
           <ul>
             <li>
+              CO (Boulder) — <a href="http://www.eosmotorsports.com" target="_blank" rel="noopener">EOS Motorsports</a>
+            </li>
+            <li>
+              GA (Atlanta) —{" "}
+              <a href="https://www.saabpartsconnection.com/" target="_blank" rel="noopener">
+                Saab Parts Connection
+              </a>
+            </li>
+            <li>
+              IA (McIntire) — <a href="http://www.meyersaab.com" target="_blank" rel="noopener">Meyer Garage</a>
+            </li>
+            <li>
+              MA (Athol) — <a href="http://www.redaero.net" target="_blank" rel="noopener">RedAero</a>
+            </li>
+            <li>
+              MA (Sutton) — <a href="https://scautoshack.com" target="_blank" rel="noopener">Scott Carr&apos;s Auto Shack/The Saab Stripper</a>
+            </li>
+            <li>ME (Union) — <a href="mailto:msaabparts@outlook.com">Mark&apos;s Saab Pick-A-Part</a></li>
+            <li>
+              MI (New Haven) — <a href="https://www.9-3auto.com" target="_blank" rel="noopener">9-3 Auto</a>
+            </li>
+            <li>
               MN (Elk River) — <a href="http://www.hansautopartsmn.com" target="_blank" rel="noopener">Hans</a>
             </li>
             <li>
               MN (Hanover) — <a href="https://www.ebay.com/str/mstraub592" target="_blank" rel="noopener">Hanover</a>
+            </li>
+            <li>
+              MO (Kansas City) — <a href="https://www.avenueautoparts.com/" target="_blank" rel="noopener">Avenue Auto Wrecking</a>
+            </li>
+            <li>
+              NY (Hastings) — <a href="http://www.goldwingsaabparts.com/" target="_blank" rel="noopener">Goldwing</a>
+            </li>
+            <li>
+              NY (Ithaca) — <a href="https://www.ebay.com/str/saabpartspro" target="_blank" rel="noopener">Saab Parts Pro</a>
+            </li>
+            <li>
+              PA —{" "}
+              <a href="http://www.epartsland.com/collections/saab" target="_blank" rel="noopener">
+                ePartsLand - European
+              </a>
             </li>
             <li>
               WI (Centuria) — <a href="http://www.strandbergauto.com" target="_blank" rel="noopener">Strandberg</a>
@@ -341,40 +378,6 @@ const sections: Section[] = [
                 Country Imports
               </a>
             </li>
-            <li>
-              IA (McIntire) — <a href="http://www.meyersaab.com" target="_blank" rel="noopener">Meyer Garage</a>
-            </li>
-            <li>
-              MO (Kansas City) — <a href="https://www.avenueautoparts.com/" target="_blank" rel="noopener">Avenue Auto Wrecking</a>
-            </li>
-            <li>
-              MI (New Haven) — <a href="https://www.9-3auto.com" target="_blank" rel="noopener">9-3 Auto</a>
-            </li>
-            <li>
-              NY (Hastings) — <a href="http://www.goldwingsaabparts.com/" target="_blank" rel="noopener">Goldwing</a>
-            </li>
-            <li>
-              CO (Boulder) — <a href="http://www.eosmotorsports.com" target="_blank" rel="noopener">EOS Motorsports</a>
-            </li>
-            <li>
-              GA (Atlanta) —{" "}
-              <a href="https://www.saabpartsconnection.com/" target="_blank" rel="noopener">
-                Saab Parts Connection
-              </a>
-            </li>
-            <li>
-              PA —{" "}
-              <a href="http://www.epartsland.com/collections/saab" target="_blank" rel="noopener">
-                ePartsLand - European
-              </a>
-            </li>
-            <li>
-              MA (Athol) — <a href="http://www.redaero.net" target="_blank" rel="noopener">RedAero</a>
-            </li>
-            <li>
-              MA (Sutton) — <a href="https://scautoshack.com" target="_blank" rel="noopener">Scott Carr&apos;s Auto Shack/The Saab Stripper</a>
-            </li>
-            <li>ME (Union) — <a href="mailto:msaabparts@outlook.com">Mark&apos;s Saab Pick-A-Part</a></li>
           </ul>
         ),
       },
@@ -451,6 +454,9 @@ const sections: Section[] = [
               Sweden — <a href="http://en.bildelsbasen.se" target="_blank" rel="noopener">Bildelsbasen.se</a>
             </li>
             <li>
+              Sweden — <a href="https://www.do88performance.com/en/artiklar/hose-kits/saab/index.html" target="_blank" rel="noopener">do88</a> — do88 is a major Swedish supplier specializing in silicone hoses and cooling solutions.
+            </li>
+            <li>
               Sweden — <a href="http://redox.se" target="_blank" rel="noopener">Redox Bilfarm</a>
             </li>
             <li>
@@ -511,7 +517,7 @@ const sections: Section[] = [
       },
       {
         id: "classic-99-900",
-        summary: "Classic 99 & 900",
+        summary: "99, Classic 900, 9000",
         content: (
           <ul>
             <li>
@@ -525,6 +531,9 @@ const sections: Section[] = [
             <li>
               United States — <a href="https://www.facebook.com/p/JK-Saabwerx-61560660335370/" target="_blank" rel="noopener">JK Saabwerx</a> —
               Makes fuel system products for C900s.
+            </li>
+            <li>
+              United States — <a href="https://www.ebay.com/str/saabpartspro" target="_blank" rel="noopener">Saab Parts Pro</a> — Primarily C900 and 9000 parts from a loaded yard in Ithaca, NY.
             </li>
             <li>
               Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a>{" "}
