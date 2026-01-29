@@ -224,6 +224,12 @@ const sections: Section[] = [
                 — OEM &amp; aftermarket parts (multiple marques).
               </li>
               <li>
+                <a href="https://www.saabpartsstock.com" target="_blank" rel="noopener">
+                  Saab Parts Stock
+                </a>{" "}
+                — Estonia. Large stock for all models.
+              </li> 
+              <li>
                 <a href="http://www.schwedenteile.de" target="_blank" rel="noopener">
                   Schwedenteile
                 </a>{" "}
