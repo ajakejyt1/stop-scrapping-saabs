@@ -200,7 +200,13 @@ const sections: Section[] = [
             <li>
               <b>Vintage Parts</b> — <a href="https://www.vpartsinc.com/automobile/saab" target="_blank" rel="noopener">vpartsinc.com</a>{" "}
               — A few years back, Orio sold off a lot of inventory to Vintage Parts. You can often find parts out of stock on other
-              sites here. This is not commonly known!
+              sites here. This is not commonly known! 
+              <div className="callout">
+              <b>A note about Vintage Parts:</b>  <br />
+
+              This site is a total treasure trove for 9-4X, NG9-5, 9-7X, and 9-2X. Everything from full center console assemblies to seats to door cards to unibody panels to engine internals. Excellent supply of trim and engine parts for NG9-3, NG900, and 9000s, too.
+
+            </div>
             </li>
           </ul>
         ),
@@ -239,13 +245,13 @@ const sections: Section[] = [
                 <a href="http://stateofnine.com" target="_blank" rel="noopener">
                   State Of Nine
                 </a>{" "}
-                — emblems, covers, accessories.
+                — emblems, covers, accessories. Still a Hirsch dealer.
               </li>
               <li>
                 <a href="http://www.genuinesaab.com" target="_blank" rel="noopener">
                   Taliaferro Imports (GenuineSaab)
                 </a>{" "}
-                — bespoke suspension &amp; performance upgrades (note: "genuine Saab parts" vs "GenuineSaab" brand).
+                — bespoke suspension &amp; performance upgrades (note: "genuine Saab parts" vs "GenuineSaab" brand). BSR dealer.
               </li>
               <li>
                 <a href="http://fcpeuro.com" target="_blank" rel="noopener">
@@ -595,14 +601,15 @@ const sections: Section[] = [
               Sweden — <a href="https://hblom.se" target="_blank" rel="noopener">hblom.se</a> — Upgrades &amp; future-proofing
               (including lightbar kits and blind spot monitoring retrofits).
             </li>
-            <li>
-              <b>Note:</b> These cars are not impossible to supply — though some specific parts are harder. Specialty groups help a
-              lot. HUD windshields becoming available again via Hedin channels.
-            </li>
-            <li>
-              <b>Cross-reference:</b> Some 9-4X parts may cross to Cadillac SRX components, and some NG9-5 parts may cross over to
+            
+            <div className="callout">
+              <b>A note about NG9-5s and 9-4Xs:</b> <br />
+              
+              These cars are not impossible to supply — though some specific parts are harder. Specialty groups help a
+              lot. Windshields and similar parts have spurts of production runs once Hedin gauges there's demand. Some 9-4X parts may cross to Cadillac SRX components, and some NG9-5 parts may cross over to
               Buick Regal/Opel Insignia parts.
-            </li>
+              
+            </div> 
           </ul>
         ),
       },
@@ -611,11 +618,7 @@ const sections: Section[] = [
         summary: "GM-era (roughly 1994-2009)",
         content: (
           <ul>
-            <li>
-              <b>GM connection tip:</b> The GM connection can pay off. Some 8-digit Saab part numbers are really GM part numbers.
-              Example: touch-up paint sourced via a GMC dealer using the same code. GM dealers often don&apos;t know the Saab
-              relationship — asking about the part by number/code (without leading with "Saab") can help.
-            </li>
+              
             <li>
               United States — <a href="https://aero-lights.com" target="_blank" rel="noopener">Aerolight</a> —
               Custom lighting and seating upgrades for GM-era cars.
@@ -664,6 +667,11 @@ const sections: Section[] = [
               United Kingdom — <a href="https://www.abbottsaab.com" target="_blank" rel="noopener">Abbott Saab</a> — Tuners from
               the UK, respected, but niche.
             </li>
+            <div className="callout">
+              <b>GM connection tip:</b> <br />The GM connection can pay off. Some 8-digit Saab part numbers are really GM part numbers.
+              Example: touch-up paint sourced via a GMC dealer using the same code. GM dealers often don&apos;t know the Saab
+              relationship — asking about the part by number/code (without leading with "Saab") can help.
+            </div> 
           </ul>
         ),
       },
@@ -941,7 +949,7 @@ export default function App() {
           >
             {navCollapsed ? "Menu" : "Finding Saab Parts"}
           </button>
-          <h2>On this page</h2>
+          <h2>How to Find Parts</h2>
           <div className="toc">
             {tocLinks.map(link => (
               <a key={link.id} href={`#${link.id}`}>
