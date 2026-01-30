@@ -31,7 +31,7 @@ const sections: Section[] = [
           </a>
           , is alive and well — and working to ensure availability of genuine Saab spare parts for the long term.
         </p>
-        <p><b>As a result, most of your searches for parts will end at step 1 or 2.</b></p>
+        <p><b>As a result, most of your searches for parts will end at step 1.</b></p>
         <p>
           This page is hosted by the <a href="http://www.saabclub.com" target="_blank" rel="noopener">Saab Club of North America</a>.
           Please consider becoming a <a href="https://saabclub.com/join/" target="_blank" rel="noopener">member</a> if this resource was helpful. Thanks to Jim Hickstein for starting this site. You can also find the one of over a hundred Official Service Centers closest to you{" "}
@@ -57,7 +57,7 @@ const sections: Section[] = [
   },
   {
     id: "part-numbers",
-    title: "Step 1 — Identify the correct part number",
+    title: "Identify the correct part number",
     description: (
       <>
         <p>
@@ -152,7 +152,7 @@ const sections: Section[] = [
   },
   {
     id: "new",
-    title: "Step 2 — Where to buy new and/or OEM parts (entire model range)",
+    title: "Step 1 — Where to buy new and/or OEM parts (entire model range)",
     description: (
       <>
         <p>
@@ -326,7 +326,7 @@ const sections: Section[] = [
   },
   {
     id: "used",
-    title: "Step 3 — Where to buy used",
+    title: "Step 2 — Where to buy used",
     description: (
       <p>
         Used parts are plentiful — especially through specialty Saab yards. Many offer warranties; ask before ordering.
@@ -378,7 +378,7 @@ const sections: Section[] = [
             <li>
               PA —{" "}
               <a href="http://www.epartsland.com/collections/saab" target="_blank" rel="noopener">
-                ePartsLand - European
+                ePartsLand
               </a>
             </li>
             <li>
@@ -421,7 +421,7 @@ const sections: Section[] = [
   },
   {
     id: "international",
-    title: "Step 4 — International sources & model-specific parts",
+    title: "Step 3 — International sources & model-specific parts",
     description: (
       <>
         <p>
@@ -797,7 +797,7 @@ const sections: Section[] = [
         title: "Save Your Saab!",
         description: (
           <p>
-            Saab isn&apos;t making cars anymore, and parts are around. Given that, if you want to pass your Saab on to a new home, please consider selling it whole to an enthusiast. People in the Facebook groups and forums above are often happy to take on projects of any depth, and would be more than happy to give friendly, reasonable advice. <b>Have a heart — save a Saab.</b>
+            Saab isn&apos;t making cars anymore, and parts are around. Given that, if you want to pass your Saab on to a new home, please consider selling it whole to an enthusiast. People in the Facebook groups and forums above are often happy to take on projects of any depth, and would be more than happy to give friendly, reasonable advice. <br /><br /> Turns out, parts aren't the problem. Giving up too early is. <b>Have a heart — save a Saab.</b>
           </p>
         ),
       },
@@ -805,10 +805,10 @@ const sections: Section[] = [
 
 const tocLinks = [
   { id: "why", label: "Saab Parts & Service Still Exist", caption: "Hedin, OEM network, community" },
-  { id: "part-numbers", label: "Step 1 — Part numbers", caption: "WIS/EPC, variants, supersessions" },
-  { id: "new", label: "Step 2 — Buy new", caption: "OEM first, best retailers" },
-  { id: "used", label: "Step 3 — Buy used", caption: "Specialty yards + aggregators" },
-  { id: "international", label: "Step 4 — International & model-specific", caption: "Global suppliers + model-specific" },
+  { id: "part-numbers", label: "Part numbers", caption: "WIS/EPC, variants, supersessions" },
+  { id: "new", label: "Step 1 — Buy new", caption: "OEM first, best retailers" },
+  { id: "used", label: "Step 2 — Buy used", caption: "Specialty yards + aggregators" },
+  { id: "international", label: "Step 3 — International & model-specific", caption: "Global suppliers + model-specific" },
   { id: "community", label: "Ask around", caption: "Facebook + non-Facebook forums" },
   { id: "save-saab", label: "Save Your Saab!", caption: "Consider selling whole to enthusiasts" },
 ];
@@ -886,12 +886,14 @@ export default function App() {
         <header style={{ flex: "1 1 400px", order: 1, display: "flex", flexDirection: "column" }}>
           <h1>Finding Saab Parts &amp; Service</h1>
           <p className="sub">
-            "Saab? You can&apos;t get parts for those anymore." <b>Wanna bet?</b>
+            <i>"Saab? You can&apos;t get parts for those anymore."</i> <b>Wanna bet?</b>
+
             <br />
-            Saab parts are often easier to source than people assume.
             <br />
-            Plus, there are over a hundred Official Service Centers and many, many more independents out there willing and able to
-            work on your Saab.
+            <b>New, warrantied parts</b> are actively distributed by Hedin, the official Saab parts supplier.
+            <br />
+            <b>Over a hundred Official Service Centers</b> are eager to service your cars.
+            <br /> 
             <br />
             <b>Yes, it is possible to daily-drive your Saab over a decade after the last one was made.</b>
           </p>
