@@ -260,10 +260,22 @@ const sections: Section[] = [
                 — Saab plus many other marques.
               </li>
               <li>
+                <a href="https://www.neobrothers.co.uk/saab-2" target="_blank" rel="noopener">
+                  Neo Brothers
+                </a>{" "}
+                — UK. Supplier known for dedication to the Saab brand.
+              </li>
+               <li>
                 <a href="https://nordicspeed.com/" target="_blank" rel="noopener">
                   NordicSpeed
                 </a>{" "}
                 — performance items &amp; accessories. Canada-based.
+              </li>
+                <li>
+                <a href="https://Saabits.com" target="_blank" rel="noopener">
+                  Saabits
+                </a>{" "}
+                — UK. Excellent supply of OEM parts, body panels, and reproduction parts.
               </li>
               <li>
                 <a href="https://skandix.de/en/" target="_blank" rel="noopener">
@@ -271,6 +283,8 @@ const sections: Section[] = [
                 </a>{" "}
                 — some hard-to-find Saab parts.
               </li>
+            
+            
             </ul>
             <div className="callout">
               <b>Maptun Dealers:</b>
