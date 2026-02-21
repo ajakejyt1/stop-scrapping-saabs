@@ -14,6 +14,9 @@ type Section = {
   details?: Detail[];
 };
 
+/** Number of Official Service Centers on the embedded map (update when the map is updated). */
+const SERVICE_CENTERS_COUNT = 267;
+
 const sections: Section[] = [
   {
     id: "why",
@@ -34,8 +37,7 @@ const sections: Section[] = [
         <p><b>As a result, most of your searches for parts will end at step 1.</b></p>
         <p>
           This page is hosted by the <a href="http://www.saabclub.com" target="_blank" rel="noopener">Saab Club of North America</a>.
-          Please consider becoming a <a href="https://saabclub.com/join/" target="_blank" rel="noopener">member</a> if this resource was helpful. Thanks to Jim Hickstein for starting this site. You can also find the one of over a hundred Official Service Centers closest to you{" "}
-          <a href="https://saabparts.com/us/book-a-service/" target="_blank" rel="noopener">here</a>.
+          Please consider becoming a <a href="https://saabclub.com/join/" target="_blank" rel="noopener">member</a> if this resource was helpful. Thanks to Jim Hickstein for starting this site. 
         </p>
         <div className="callout">
           <b>Mythbusting:</b> Saab parts are not unobtainable or unaffordable. Saabs cost less to run than most comparable
@@ -50,6 +52,29 @@ const sections: Section[] = [
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+          />
+        </div>
+      </>
+    ),
+  },
+  {
+    id: "service-centers",
+    title: "Service centers",
+    description: (
+      <>
+        <p>
+          When you get your parts, you might want some help installing them. Here is a map of US and Canadian service centers verified by the <a href="https://saabclub.com/join/" target="_blank" rel="noopener">Saab Club of North America</a> as working on Saabs.
+        </p>
+        <p>
+          You can also find the one of over a hundred Official Service Centers closest to you{" "}
+          <a href="https://saabparts.com/us/book-a-service/" target="_blank" rel="noopener">here</a>.
+        </p>
+        <div style={{ marginTop: "0.5rem", position: "relative", paddingBottom: "75%", height: 0, overflow: "hidden", maxWidth: "100%" }}>
+          <iframe
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            src="https://www.google.com/maps/d/u/1/embed?mid=10olwq-qHq4VM3E-7AziVjMYXkECkEvU&ehbc=2E312F"
+            title="Saab service centers map"
+            frameBorder="0"
           />
         </div>
       </>
@@ -819,6 +844,7 @@ const sections: Section[] = [
 
 const tocLinks = [
   { id: "why", label: "Saab Parts & Service Still Exist", caption: "Hedin, OEM network, community" },
+  { id: "service-centers", label: "Service centers", caption: "Service center map" },
   { id: "part-numbers", label: "Part numbers", caption: "WIS/EPC, variants, supersessions" },
   { id: "new", label: "Step 1 — Buy new", caption: "OEM first, best retailers" },
   { id: "used", label: "Step 2 — Buy used", caption: "Specialty yards + aggregators" },
@@ -950,7 +976,25 @@ export default function App() {
             color: "var(--muted)",
             lineHeight: 1.4
           }}>
-            unique resources listed here for the Saab community
+            parts sites listed below
+          </div>
+          <div style={{ 
+            fontSize: "clamp(32px, 4vw, 48px)", 
+            fontWeight: "bold",
+            color: "var(--muted)",
+            lineHeight: 1.4,
+            marginTop: "10px",
+            paddingTop: "10px",
+            borderTop: "1px solid var(--border)"
+          }}>
+            {SERVICE_CENTERS_COUNT}
+          </div>
+          <div style={{ 
+            fontSize: "16px", 
+            color: "var(--muted)",
+            lineHeight: 1.4
+          }}>
+            service centers on the map below
           </div>
         </div>
       </div>
@@ -997,7 +1041,7 @@ export default function App() {
       </div>
 
       <footer>
-        <p>stopScrappingSaabs.org · Saab Club of North America</p>
+        <p><a href="https://forms.gle/rGW2gugTMBUi8v9q7" target="_blank" rel="noopener">Submit a parts site or service center</a> · Saab Club of North America</p>
       </footer>
     </div>
   );
