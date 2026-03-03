@@ -518,6 +518,10 @@ const sections: Section[] = [
               Sweden — <a href="https://shop.speedparts.se/en/" target="_blank" rel="noopener">Speedparts</a>{" "}
               — Excellent source of parts not found among the usual sites.
             </li>
+            <li>
+              United Kingdom — <a href="https://octoclassic.com/product-category/saab" target="_blank" rel="noopener">OctoClassic</a>{" "}
+              — Reproduction plastic and trim pieces.
+            </li>
           </ul>
         ),
       },
