@@ -19,6 +19,32 @@ const SERVICE_CENTERS_COUNT = 267;
 
 const sections: Section[] = [
   {
+    id: "outlet-store",
+    title: "Shop the Saab Original Outlet Store!",
+    description: (
+      <>
+        <p>
+          <b>
+            Need a part?{" "}
+            <a href="https://outlet.saabparts.com" target="_blank" rel="noopener">
+              Get it now.
+            </a>{" "}
+          </b>
+          Don&apos;t miss this chance to stock up on parts being cleared out — to make room for brand new ones!
+        </p>
+        <p>
+          <a href="https://outlet.saabparts.com" target="_blank" rel="noopener">
+            <img
+              src="/public-saab-outlet.png"
+              alt="Shop the Saab Original Outlet."
+              style={{ maxWidth: "100%", height: "auto", marginTop: "0.75rem" }}
+            />
+          </a>
+        </p>
+      </>
+    ),
+  },
+  {
     id: "why",
     title: "Saab Parts & Service Still Exist",
     description: (
