@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (optional)
-        uses: actions/checkout@v4
+        uses: actions/stop-scrapping-saabs@latest
 
       - name: Run script on remote host
-        uses: appleboy/ssh-action@v1.0.3
+        uses: ajakejyt1/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
