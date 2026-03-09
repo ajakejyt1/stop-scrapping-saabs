@@ -5,13 +5,17 @@ on:
 
 jobs:
   run-remote-script:
+    name: SSH + run script
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout (optional)
-        uses: actions/stop-scrapping-saabs@latest
+      - name: Checkout ajakejyt1/stop-scrapping-saabs
+        uses: actions/checkout@v4
+        with:
+          repository: ajakejyt1/stop-scrapping-saabs
 
       - name: Run script on remote host
-        uses: ajakejyt1/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
