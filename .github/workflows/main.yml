@@ -1,0 +1,23 @@
+name: Run remote bash script over SSH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-remote-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (optional)
+        uses: actions/checkout@v4
+
+      - name: Run script on remote host
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            set -euo pipefail
+            chmod +x /home/jake/deploy.sh
+            /home/jake/deploy.sh
