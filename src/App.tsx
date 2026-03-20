@@ -15,7 +15,7 @@ type Section = {
 };
 
 /** Number of Official Service Centers on the embedded map (update when the map is updated). */
-const SERVICE_CENTERS_COUNT = 267;
+const SERVICE_CENTERS_COUNT = 278;
 
 const sections: Section[] = [
   {
