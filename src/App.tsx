@@ -518,6 +518,13 @@ const sections: Section[] = [
               many cars. Primarily specializing in C900s.
             </li>
             <li>
+              United States —{" "}
+              <a href="https://www.lseat.com/categories/genuine-leather/saab.html" target="_blank" rel="noopener">
+                LSeat
+              </a>{" "}
+              — High-quality new leather covers for decent prices for when OEM covers are out of stock.
+            </li>
+            <li>
               Germany — <a href="https://www.heuschmid.de/restaurierung/?lang=en" target="_blank" rel="noopener">Heuschmid</a>{" "}
               — Highly-respected, very large dealership known for full restorations and reproduction Hirsch parts(!).
             </li>
