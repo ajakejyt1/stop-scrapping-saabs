@@ -15,7 +15,7 @@ type Section = {
 };
 
 /** Number of Official Service Centers on the embedded map (update when the map is updated). */
-const SERVICE_CENTERS_COUNT = 278;
+const SERVICE_CENTERS_COUNT = 279;
 
 const sections: Section[] = [
   {
@@ -704,6 +704,13 @@ const sections: Section[] = [
             <li>
               United States — <a href="https://aero-lights.com" target="_blank" rel="noopener">Aerolight</a> —
               Custom lighting and seating upgrades for GM-era cars.
+            </li>
+            <li>
+              United States —{" "}
+              <a href="http://eurokrew.com/products" target="_blank" rel="noopener">
+                EuroKrew
+              </a>{" "}
+              — Spare parts and upgrades for NG9-3s.
             </li>
             <li>
               United States — <a href="https://deanhillsaabservice.com/Services/" target="_blank" rel="noopener">Dean Hill Saab Service</a>{" "}
