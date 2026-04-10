@@ -630,6 +630,13 @@ const sections: Section[] = [
               United States — <a href="https://www.ebay.com/str/saabpartspro" target="_blank" rel="noopener">Saab Parts Pro</a> — Primarily C900 and 9000 parts from a loaded yard in Ithaca, NY.
             </li>
             <li>
+              United States —{" "}
+              <a href="https://www.9tsaabs.com" target="_blank" rel="noopener">
+                9T Saabs
+              </a>{" "}
+              — Merchandise and functional, niche upgrades for GM-era and C900 cars; restoration assistance.
+            </li>
+            <li>
               Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a>{" "}
               — Also 9-5 NG &amp; 9-4X. Performance parts.
             </li>
@@ -711,6 +718,13 @@ const sections: Section[] = [
                 EuroKrew
               </a>{" "}
               — Spare parts and upgrades for NG9-3s.
+            </li>
+            <li>
+              United States —{" "}
+              <a href="https://www.9tsaabs.com" target="_blank" rel="noopener">
+                9T Saabs
+              </a>{" "}
+              — Merchandise and functional, niche upgrades for GM-era and C900 cars; restoration assistance.
             </li>
             <li>
               United States — <a href="https://deanhillsaabservice.com/Services/" target="_blank" rel="noopener">Dean Hill Saab Service</a>{" "}
