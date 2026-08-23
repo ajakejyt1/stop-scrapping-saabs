@@ -317,6 +317,12 @@ const sections: Section[] = [
                 — Saab plus many other marques.
               </li>
               <li>
+                <a href="https://shop.klracing.se/sv/artiklar/reservdelar-saab/index.html" target="_blank" rel="noopener">
+                  KL Racing
+                </a>{" "}
+                — Large array of maintenance, performance, and body parts for modern and classic Saabs alike.
+              </li>
+              <li>
                 <a href="https://www.neobrothers.co.uk/saab-2" target="_blank" rel="noopener">
                   Neo Brothers
                 </a>{" "}
