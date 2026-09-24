@@ -54,11 +54,11 @@ const sections: Section[] = [
           and the enthusiast community is extremely active.
         </p>
         <p>
-          More importantly, the former Saab Parts AB (formerly Orio AB), now{" "}
+          More importantly, the former Saab Parts AB (formerly Orio AB) {" "}
           <a href="https://saabparts.com" target="_blank" rel="noopener">
-            Hedin Parts and Logistics AB
+          is alive and well
           </a>
-          , is alive and well — and working to ensure availability of genuine Saab spare parts for the long term.
+          — and working to ensure availability of genuine Saab spare parts for the long term.
         </p>
         <p><b>As a result, most of your searches for parts will end at step 1.</b></p>
         <p>
@@ -212,7 +212,7 @@ const sections: Section[] = [
         </p>
         <p>
           <a href="https://saabparts.com/us/book-a-service/" target="_blank" rel="noopener">
-            Hedin
+            Saab Original
           </a>{" "}
           maintains a list of Official Service Centers (OSCs) and affiliated parts retailers. <b>Shop around</b>: prices vary,
           and some dealers have local stock when upstream is dry.
@@ -246,7 +246,7 @@ const sections: Section[] = [
             </li>
             <li>
               <b>Saab Parts Outlet</b> — <a href="https://outlet.saabparts.com" target="_blank" rel="noopener">outlet.saabparts.com</a>{" "}
-              — Hedin Parts&apos;s own outlet store. There are great deals to be had here.
+              — SPG North America&apos;s own outlet store. There are great deals to be had here.
             </li>
             <li>
               <b>Vintage Parts</b> — <a href="https://www.vpartsinc.com/automobile/saab" target="_blank" rel="noopener">vpartsinc.com</a>{" "}
@@ -557,7 +557,7 @@ const sections: Section[] = [
             </li>
             <li>
               Sweden — <a href="https://saabklubben-reservdelar.se" target="_blank" rel="noopener">Saabklubben Reservdelar</a>{" "}
-              — Swedish Saab Club. Makes TONS of reproduction parts, and partners with Hedin for items like new seat covers.
+              — Swedish Saab Club. Makes TONS of reproduction parts, and partners with Saab Original for items like new seat covers.
             </li>
             <li>
               Sweden — <a href="https://shop.speedparts.se/en/" target="_blank" rel="noopener">Speedparts</a>{" "}
@@ -707,7 +707,7 @@ const sections: Section[] = [
               <b>A note about NG9-5s and 9-4Xs:</b> <br />
               
               These cars are not impossible to supply — though some specific parts are harder. Specialty groups help a
-              lot. Windshields and similar parts have spurts of production runs once Hedin gauges there's demand. Some 9-4X parts may cross to Cadillac SRX components, and some NG9-5 parts may cross over to
+              lot. Windshields and similar parts have spurts of production runs once Saab Original gauges there's demand. Some 9-4X parts may cross to Cadillac SRX components, and some NG9-5 parts may cross over to
               Buick Regal/Opel Insignia parts.
               
             </div> 
@@ -919,7 +919,7 @@ const sections: Section[] = [
 ];
 
 const tocLinks = [
-  { id: "why", label: "Saab Parts & Service Still Exist", caption: "Hedin, OEM network, community" },
+  { id: "why", label: "Saab Parts & Service Still Exist", caption: "Saab Original, OEM network, community" },
   { id: "service-centers", label: "Service centers", caption: "Service center map" },
   { id: "part-numbers", label: "Part numbers", caption: "WIS/EPC, variants, supersessions" },
   { id: "new", label: "Step 1 — Buy new", caption: "OEM first, best retailers" },
@@ -1006,7 +1006,11 @@ export default function App() {
 
             <br />
             <br />
-            <b>New, warrantied parts</b> are actively distributed by Hedin, the official Saab parts supplier.
+            <b>New, warrantied parts</b> are actively distributed by the {" "}
+                  <a href="https://saabparts.com" target="_blank" rel="noopener">
+                  official Saab parts supplier
+                  </a>
+                  .
             <br />
             <b>Over a hundred Official Service Centers</b> are eager to service your cars.
             <br /> 
