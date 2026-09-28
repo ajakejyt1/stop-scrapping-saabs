@@ -134,10 +134,10 @@ const sections: Section[] = [
                   — factory repair/service documentation.
                 </li>
                 <li>
-                  <a href="https://esaabparts.com" target="_blank" rel="noopener">
+                  <a href="https://epc.ys3resq.com/" target="_blank" rel="noopener">
                     Saab EPC (Electronic Parts Catalog)
                   </a>{" "}
-                  — link redirects to eSaabParts, which roughly uses the EPC for navigation.
+                  — the holy grail of Saab parts information. Interactive diagrams, versioning, and sources.
                 </li>
                 <li>
                   <a href="https://www.obdii.shop/goods-21-GM-Tech2-Tech-2-Scanner-GM-Diagnostic-tool-CANdi-TIS2000.html" target="_blank" rel="noopener">
