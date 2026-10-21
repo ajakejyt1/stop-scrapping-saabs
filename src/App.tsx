@@ -643,6 +643,10 @@ const sections: Section[] = [
               — Merchandise and functional, niche upgrades for GM-era and C900 cars; restoration assistance.
             </li>
             <li>
+              United States — <a href="hhttps://trusttubular.com/collections/saab" target="_blank" rel="noopener">Trust Tubular </a> {" "}
+              — Performance exhaust manifolds, gaskets, and hardware for GM and Classic era Saabs.
+            </li>
+            <li>
               Netherlands — <a href="https://shop.kcperformance.eu/collections/saab-parts" target="_blank" rel="noopener">KC Performance</a>{" "}
               — Also 9-5 NG &amp; 9-4X. Performance parts.
             </li>
@@ -744,6 +748,10 @@ const sections: Section[] = [
             </li>
             <li>
               United States — <a href="https://ghwerks.com" target="_blank" rel="noopener">GHWerks</a> — American-made mechanical upgrades (brakes, motor internals, mounts, clutches) for 9000s, 9-5s, 9-3s, and even a few C900 parts.
+            </li>
+            <li>
+              United States — <a href="hhttps://trusttubular.com/collections/saab" target="_blank" rel="noopener">Trust Tubular </a> {" "}
+              — Performance exhaust manifolds, gaskets, and hardware for GM and Classic era Saabs.
             </li>
             <li>
               United States — <a href="https://www.jxbperformance.com" target="_blank" rel="noopener">JXB Performance</a> —
